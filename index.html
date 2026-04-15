@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahesh Gidwani — ERP Consultant & TPM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --blue: #1a56db;
+    --blue-light: #e8f0fb;
+    --dark: #0f172a;
+    --mid: #334155;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --bg: #f8fafc;
+    --white: #ffffff;
+    --green: #166534;
+    --green-bg: #dcfce7;
+    --grad: linear-gradient(135deg, #1a56db 0%, #7c3aed 100%);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--dark); background: var(--white); overflow-x: hidden; }
+
+  /* ── Scrollbar ── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 3px; }
+
+  /* ── Nav ── */
+  nav {
+    position: sticky; top: 0; z-index: 200;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2.5rem; height: 56px;
+    transition: box-shadow 0.3s;
+  }
+  nav.scrolled { box-shadow: 0 4px 24px rgba(26,86,219,0.08); }
+  .nav-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px; color: var(--dark); text-decoration: none;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .nav-dot { width: 8px; height: 8px; background: var(--grad); border-radius: 50%; }
+  .nav-links { display: flex; gap: 24px; list-style: none; }
+  .nav-links a { font-size: 12.5px; color: var(--muted); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--blue); }
+
+  /* ── Hero ── */
+  .hero {
+    position: relative; overflow: hidden;
+    background: linear-gradient(160deg, #0f172a 0%, #1e3a8a 60%, #1a56db 100%);
+    padding: 6rem 2.5rem 5rem; text-align: center; color: white;
+  }
+  .hero-bg-grid {
+    position: absolute; inset: 0; pointer-events: none;
+    background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: gridMove 20s linear infinite;
+  }
+  @keyframes gridMove { 0%{transform:translateY(0)} 100%{transform:translateY(40px)} }
+
+  .hero-pill {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(8px);
+    color: #93c5fd; font-size: 12px; font-weight: 500;
+    padding: 6px 16px; border-radius: 20px; margin-bottom: 24px;
+    animation: fadeDown 0.6s ease both;
+  }
+  .pill-dot { width: 6px; height: 6px; background: #34d399; border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.4)} }
+
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 58px; font-weight: 700; line-height: 1.1;
+    background: linear-gradient(135deg, #fff 40%, #93c5fd 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    margin-bottom: 16px;
+    animation: fadeDown 0.7s 0.1s ease both;
+  }
+  .hero-sub {
+    font-size: 16px; color: #94a3b8; max-width: 600px;
+    margin: 0 auto 36px; line-height: 1.7; font-weight: 400;
+    animation: fadeDown 0.7s 0.2s ease both;
+  }
+  .hero-sub span { color: #93c5fd; font-weight: 500; }
+
+  .stats-row {
+    display: flex; justify-content: center; gap: 12px;
+    flex-wrap: wrap; margin-bottom: 36px;
+    animation: fadeUp 0.7s 0.3s ease both;
+  }
+  .stat-pill {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(8px);
+    border-radius: 14px; padding: 14px 20px; min-width: 130px; text-align: center;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .stat-pill:hover { transform: translateY(-3px); background: rgba(255,255,255,0.12); }
+  .stat-val { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: white; }
+  .stat-lbl { font-size: 10.5px; color: #94a3b8; margin-top: 4px; line-height: 1.4; }
+
+  .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; animation: fadeUp 0.7s 0.4s ease both; }
+  .btn-p {
+    background: white; color: var(--dark);
+    border: none; padding: 12px 28px; border-radius: 10px;
+    font-size: 13.5px; font-weight: 600; cursor: pointer; text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  .btn-p:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.4); }
+  .btn-s {
+    background: transparent; color: white;
+    border: 1px solid rgba(255,255,255,0.3); padding: 12px 28px; border-radius: 10px;
+    font-size: 13.5px; font-weight: 500; cursor: pointer; text-decoration: none;
+    backdrop-filter: blur(8px);
+    transition: background 0.2s, transform 0.2s;
+  }
+  .btn-s:hover { background: rgba(255,255,255,0.1); transform: translateY(-2px); }
+
+  /* ── Floating badge ── */
+  .available-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    position: relative; margin-top: 28px;
+    background: rgba(52,211,153,0.15); border: 1px solid rgba(52,211,153,0.3);
+    color: #34d399; font-size: 11px; font-weight: 500;
+    padding: 5px 14px; border-radius: 20px;
+    animation: fadeUp 0.7s 0.5s ease both;
+  }
+
+  /* ── Section wrapper ── */
+  .wrap { max-width: 960px; margin: 0 auto; padding: 4rem 2.5rem; }
+  .sec-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--blue); margin-bottom: 8px; }
+  .sec-head { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--dark); margin-bottom: 32px; }
+  .sec-head em { font-style: normal; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .alt { background: var(--bg); }
+
+  /* ── Divider ── */
+  .section-divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); margin: 0 2.5rem; }
+
+  /* ── About ── */
+  .about-grid { display: grid; grid-template-columns: 200px 1fr; gap: 40px; align-items: start; }
+  .avatar-box {
+    width: 180px; height: 180px;
+    background: var(--grad);
+    border-radius: 20px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+    box-shadow: 0 12px 40px rgba(26,86,219,0.3);
+    position: relative; overflow: hidden;
+  }
+  .avatar-box::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+  }
+  .avatar-initials { font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 700; color: white; line-height: 1; position: relative; }
+  .avatar-sub { font-size: 11px; color: rgba(255,255,255,0.8); letter-spacing: 2px; font-weight: 500; position: relative; }
+
+  .bio-text { font-size: 14.5px; color: var(--mid); line-height: 1.75; }
+  .bio-text p+p { margin-top: 14px; }
+  .bio-text strong { color: var(--dark); }
+  .looking-box {
+    margin-top: 20px;
+    background: linear-gradient(135deg, var(--blue-light), #f0f4ff);
+    border: 1px solid #c7d7f9;
+    border-left: 3px solid var(--blue);
+    border-radius: 10px; padding: 14px 16px;
+    font-size: 13.5px; color: var(--mid); line-height: 1.6;
+  }
+  .looking-box strong { color: var(--dark); }
+
+  /* ── Timeline ── */
+  .timeline { padding-left: 28px; position: relative; }
+  .timeline::before { content: ''; position: absolute; left: 7px; top: 10px; bottom: 20px; width: 2px; background: linear-gradient(180deg, var(--blue), #7c3aed, #e2e8f0); border-radius: 2px; }
+  .tl-item { position: relative; margin-bottom: 36px; }
+  .tl-item:last-child { margin-bottom: 0; }
+  .tl-dot {
+    position: absolute; left: -21px; top: 6px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--grad); border: 3px solid white;
+    box-shadow: 0 0 0 2px var(--blue);
+  }
+  .tl-card {
+    background: white; border: 1px solid var(--border);
+    border-radius: 14px; padding: 20px 22px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .tl-card:hover { box-shadow: 0 8px 32px rgba(26,86,219,0.1); transform: translateY(-2px); }
+  .tl-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 6px; margin-bottom: 4px; }
+  .tl-co { font-size: 15.5px; font-weight: 700; color: var(--dark); }
+  .tl-date { font-size: 11.5px; color: white; background: var(--grad); padding: 3px 10px; border-radius: 6px; font-weight: 500; white-space: nowrap; }
+  .tl-role { font-size: 13px; color: var(--blue); font-weight: 500; margin: 4px 0 14px; }
+  .tl-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+  .tl-list li { font-size: 13px; line-height: 1.55; color: var(--mid); padding-left: 16px; position: relative; }
+  .tl-list li::before { content: "▸"; position: absolute; left: 0; color: var(--blue); font-size: 10px; top: 3px; }
+  .tl-list strong { color: var(--dark); font-weight: 600; }
+
+  /* ── Skills ── */
+  .skill-groups { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .skill-group-card { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+  .sg-title { font-size: 11px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+  .tag {
+    background: var(--bg); border: 1px solid var(--border);
+    color: var(--mid); font-size: 12px; font-weight: 500;
+    padding: 5px 12px; border-radius: 7px;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    cursor: default;
+  }
+  .tag:hover { background: var(--blue-light); color: var(--blue); border-color: #c7d7f9; }
+
+  /* ── Certs ── */
+  .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .cert-card {
+    background: white; border: 1px solid var(--border);
+    border-radius: 12px; padding: 16px 18px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    position: relative; overflow: hidden;
+  }
+  .cert-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--grad); }
+  .cert-card:hover { box-shadow: 0 8px 24px rgba(26,86,219,0.1); transform: translateY(-2px); }
+  .cert-name { font-size: 13px; font-weight: 600; color: var(--dark); line-height: 1.4; }
+  .cert-org { font-size: 11px; color: var(--muted); margin-top: 4px; }
+  .cert-lnk { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; color: var(--blue); text-decoration: none; margin-top: 8px; font-weight: 500; }
+  .cert-lnk:hover { text-decoration: underline; }
+
+  /* ── Education ── */
+  .edu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .edu-card {
+    background: white; border: 1px solid var(--border);
+    border-radius: 14px; padding: 24px 26px;
+    position: relative; overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .edu-card::after {
+    content: ''; position: absolute; bottom: -30px; right: -30px;
+    width: 100px; height: 100px; border-radius: 50%;
+    background: var(--grad); opacity: 0.05;
+  }
+  .edu-card:hover { box-shadow: 0 8px 32px rgba(26,86,219,0.1); transform: translateY(-2px); }
+  .edu-school { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--dark); }
+  .edu-deg { font-size: 13.5px; color: var(--mid); margin: 6px 0 10px; line-height: 1.5; }
+  .edu-gpa { font-size: 12.5px; font-weight: 600; color: var(--blue); background: var(--blue-light); display: inline-block; padding: 3px 10px; border-radius: 6px; }
+  .edu-note { font-size: 12.5px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+
+  /* ── Projects ── */
+  .proj-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .proj-card {
+    background: white; border: 1px solid var(--border);
+    border-radius: 14px; padding: 22px 24px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    position: relative; overflow: hidden;
+  }
+  .proj-card::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, var(--blue-light) 0%, transparent 60%);
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .proj-card:hover::before { opacity: 1; }
+  .proj-card:hover { box-shadow: 0 12px 40px rgba(26,86,219,0.12); transform: translateY(-3px); }
+  .proj-head { font-size: 14.5px; font-weight: 700; color: var(--dark); position: relative; }
+  .proj-tag { display: inline-block; background: var(--green-bg); color: var(--green); font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 5px; margin: 8px 0 12px; position: relative; }
+  .proj-body { font-size: 13px; color: var(--mid); line-height: 1.6; position: relative; }
+  .proj-body strong { color: var(--dark); }
+
+  /* ── Contact ── */
+  .contact-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .contact-card {
+    background: white; border: 1px solid var(--border);
+    border-radius: 14px; padding: 24px 20px; text-align: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+    position: relative; overflow: hidden;
+  }
+  .contact-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--grad); }
+  .contact-card:hover { box-shadow: 0 8px 32px rgba(26,86,219,0.1); transform: translateY(-2px); }
+  .c-icon { font-size: 24px; margin-bottom: 10px; }
+  .c-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px; font-weight: 600; }
+  .c-val { font-size: 13px; color: var(--blue); text-decoration: none; font-weight: 500; word-break: break-all; }
+  .c-val:hover { text-decoration: underline; }
+
+  /* ── Footer ── */
+  footer {
+    text-align: center; padding: 2.5rem;
+    font-size: 12px; color: var(--muted);
+    border-top: 1px solid var(--border);
+    background: var(--dark); color: #64748b;
+  }
+  footer span { color: #3b82f6; }
+
+  /* ── Scroll animations ── */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+  .reveal-left { opacity: 0; transform: translateX(-28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal-left.visible { opacity: 1; transform: none; }
+
+  @keyframes fadeDown { from{opacity:0;transform:translateY(-16px)} to{opacity:1;transform:none} }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:none} }
+
+  /* ── Responsive ── */
+  @media(max-width:700px){
+    .hero-name{font-size:36px}
+    .about-grid,.skill-groups,.cert-grid,.edu-grid,.proj-grid,.contact-row{grid-template-columns:1fr}
+    nav{padding:0 1rem} .nav-links{gap:12px}
+    .nav-links a{font-size:11px}
+    .wrap{padding:3rem 1.25rem}
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="main-nav">
+  <a class="nav-brand" href="#">
+    <span class="nav-dot"></span>
+    Mahesh Gidwani
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-pill">
+    <span class="pill-dot"></span>
+    Open to Full-Time · May 2026 · Chicago, IL
+  </div>
+  <div class="hero-name">Mahesh Gidwani, PMP®</div>
+  <div class="hero-sub">
+    <span>ERP Consultant &amp; Technical Program Manager</span> with 4+ years delivering
+    Oracle EBS and SAP S/4HANA transformations across Procurement, Finance, and Supply Chain.
+    Amazon Robotics · Purdue MEM.
+  </div>
+  <div class="stats-row">
+    <div class="stat-pill"><div class="stat-val">$1.7M</div><div class="stat-lbl">Annual savings<br>via EBS automation</div></div>
+    <div class="stat-pill"><div class="stat-val">$1M+</div><div class="stat-lbl">Cost misallocations<br>traced &amp; resolved</div></div>
+    <div class="stat-pill"><div class="stat-val">15→2</div><div class="stat-lbl">Day PO approval<br>cycle reduction</div></div>
+    <div class="stat-pill"><div class="stat-val">60%</div><div class="stat-lbl">Vendor escalation<br>reduction</div></div>
+  </div>
+  <div class="hero-btns">
+    <a class="btn-p" href="mailto:mgidwani@purdue.edu">✉ Get in Touch</a>
+    <a class="btn-s" href="https://linkedin.com/in/maheshgidwanii" target="_blank">↗ LinkedIn Profile</a>
+  </div>
+  <div class="available-badge">
+    <span class="pill-dot"></span>
+    Available for full-time roles starting May 2026
+  </div>
+</div>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-eyebrow">About Me</div>
+    <div class="sec-head">Hello, I'm <em>Mahesh</em></div>
+    <div class="about-grid reveal">
+      <div>
+        <div class="avatar-box">
+          <div class="avatar-initials">MG</div>
+          <div class="avatar-sub">PMP®</div>
+        </div>
+      </div>
+      <div>
+        <div class="bio-text">
+          <p>In a world where ERP implementations fail at staggering rates, I bridge the gap between business requirements and technical execution — so transformations actually ship, and the numbers move.</p>
+          <p>At <strong>Amazon Robotics</strong>, I led the STP procurement track of a full Oracle EBS → SAP S/4HANA migration, governed system-of-record design across 6+ integrated platforms, and built production-scale PL/SQL tooling that generated <strong>$1.7M in annual savings</strong>. Before that, at <strong>Wipro</strong>, I delivered Oracle EBS implementations for GUVNL across AP, PO, and Finance — cutting approval cycles from 8 to 3 days and closing a recurring government audit finding.</p>
+          <p>I hold three SAP certifications, a PMP, and I'm completing my Master of Engineering Management at <strong>Purdue (GPA 3.7, May 2026)</strong>. Outside of work, I enjoy cricket, strategy games, and anything that requires thinking three moves ahead.</p>
+        </div>
+        <div class="looking-box">
+          <strong>Currently seeking:</strong> ERP Consultant (SAP/Oracle), Technical Program Manager, or Product Manager roles — with a preference for firms doing serious enterprise transformation work. Open to EY, Deloitte, PwC, Amazon, Microsoft, and high-growth tech.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ── EXPERIENCE ── -->
+<section id="experience" class="alt">
+  <div class="wrap">
+    <div class="sec-eyebrow">Work Experience</div>
+    <div class="sec-head">Where I've <em>worked</em></div>
+    <div class="timeline">
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div class="tl-co">Amazon Robotics</div>
+            <div class="tl-date">Jan 2025 – Dec 2025</div>
+          </div>
+          <div class="tl-role">System Development Co-op · Digital Transformation · North Andover, MA</div>
+          <ul class="tl-list">
+            <li>Led <strong>STP procurement track</strong> of Oracle EBS → SAP S/4HANA transformation — resolved Coupa / Ariba / S/4HANA system-of-record boundaries across 6+ integrated systems</li>
+            <li>Conducted <strong>fit-gap analysis</strong> across 6 procurement scenarios — identified 15+ gaps; authored as-is/to-be designs adopted as SI's functional spec baseline</li>
+            <li>Enforced <strong>Amazon financial governance</strong> in SAP design — aligned CAR validation, three-way match, and approval hierarchy across <strong>300+ monthly transactions</strong></li>
+            <li>Cut PO approval cycle from <strong>15–20 days → 1–2 days</strong> via PL/SQL procedures, APEX dashboard, and OAF changes</li>
+            <li>Saved <strong>$1.7M annually</strong> building an Oracle EBS concurrent program for bulk SO line updates via WebADI</li>
+            <li>Built a waterfall <strong>pricing engine for SBOM CAR validation</strong> using 4 custom PL/SQL functions and an APEX cost-source dashboard</li>
+            <li>Traced <strong>$1M+ in FY22 landed cost misallocations</strong> — proposed automation projected to save 250–500 hrs of annual close work</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div class="tl-co">Wipro Technologies</div>
+            <div class="tl-date">Apr 2022 – Jun 2024</div>
+          </div>
+          <div class="tl-role">Sr. Technical Consultant, Oracle EBS · India</div>
+          <ul class="tl-list">
+            <li>Implemented <strong>Oracle AME approval hierarchy</strong> for GUVNL's PO workflow across 6 CVC-mandated authority levels — cut cycle from <strong>8 → 3 days</strong>, closed recurring government audit finding</li>
+            <li>Automated <strong>three-way match exception detection</strong> for 200+ monthly AP invoices — eliminated 4-day manual process, cut invoice holds from 15–20 to under 5</li>
+            <li>Built Oracle APEX <strong>payment aging dashboard</strong> — real-time visibility into $1.8M vendor obligations, reduced escalations by <strong>60%</strong>, recovered <strong>$0.8M</strong> in early-payment discounts</li>
+            <li>Built <strong>PL/SQL budget validation layer</strong> on PR-to-PO screen — blocked out-of-budget POs in real time, eliminating <strong>20–30% quarterly budget correction errors</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div class="tl-co">Hewlett-Packard Inc.</div>
+            <div class="tl-date">Aug 2021 – Apr 2022</div>
+          </div>
+          <div class="tl-role">Business Analyst · Customer Support Solutions · India</div>
+          <ul class="tl-list">
+            <li>Developed KPI-driven <strong>Power BI dashboards</strong> for material flow, SLA adherence, and inventory — reduced response time by <strong>29%</strong></li>
+            <li>Integrated MS Power Automate with <strong>Microsoft D365</strong> inventory systems — reduced handling time by <strong>25%</strong> across production cycles</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ── SKILLS ── -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-eyebrow">Skills</div>
+    <div class="sec-head">Technical <em>toolkit</em></div>
+    <div class="skill-groups">
+      <div class="skill-group-card reveal">
+        <div class="sg-title">ERP Platforms</div>
+        <div class="tags">
+          <span class="tag">SAP S/4HANA</span><span class="tag">SAP Ariba SCC</span><span class="tag">SAP BTP</span>
+          <span class="tag">Oracle EBS (INV, AP, AR, PO)</span><span class="tag">Oracle APEX</span>
+          <span class="tag">Oracle AME</span><span class="tag">Coupa</span><span class="tag">Kinaxis</span>
+          <span class="tag">MDG</span><span class="tag">MS D365</span>
+        </div>
+      </div>
+      <div class="skill-group-card reveal">
+        <div class="sg-title">Programming &amp; Data</div>
+        <div class="tags">
+          <span class="tag">PL/SQL</span><span class="tag">Python</span><span class="tag">SQL</span>
+          <span class="tag">Power BI</span><span class="tag">MS Power Automate</span><span class="tag">WebADI</span>
+          <span class="tag">ABAP</span><span class="tag">OAF</span><span class="tag">Linux</span>
+        </div>
+      </div>
+      <div class="skill-group-card reveal">
+        <div class="sg-title">Business Process</div>
+        <div class="tags">
+          <span class="tag">Procure-to-Pay (P2P)</span><span class="tag">Source-to-Pay (STP)</span>
+          <span class="tag">Financial Close</span><span class="tag">Supply Chain</span>
+          <span class="tag">Fit-Gap Analysis</span><span class="tag">As-Is / To-Be Design</span>
+          <span class="tag">UAT &amp; CRP</span><span class="tag">Finance Controls</span>
+        </div>
+      </div>
+      <div class="skill-group-card reveal">
+        <div class="sg-title">Program Management</div>
+        <div class="tags">
+          <span class="tag">Agile / Scrum</span><span class="tag">SDLC</span>
+          <span class="tag">Change Management</span><span class="tag">Stakeholder Management</span>
+          <span class="tag">Risk Mitigation</span><span class="tag">Cross-functional Collaboration</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ── CERTIFICATIONS ── -->
+<section id="certifications" class="alt">
+  <div class="wrap">
+    <div class="sec-eyebrow">Certifications</div>
+    <div class="sec-head">Credentials &amp; <em>Badges</em></div>
+    <div class="cert-grid">
+      <div class="cert-card reveal"><div class="cert-name">PMP®</div><div class="cert-org">Project Management Institute</div><div class="cert-lnk">✓ Active</div></div>
+      <div class="cert-card reveal"><div class="cert-name">SAP Certified — S/4HANA Sourcing &amp; Procurement</div><div class="cert-org">SAP SE</div><a class="cert-lnk" href="https://www.credly.com/badges/234849d1-1bcd-4158-8422-450e4dbb9043/public_url" target="_blank">View on Credly →</a></div>
+      <div class="cert-card reveal"><div class="cert-name">SAP Certified — ABAP Cloud Back-End Developer</div><div class="cert-org">SAP SE</div><a class="cert-lnk" href="https://www.credly.com/badges/f4f7e3d5-4228-4d2c-940b-f3156b245260/public_url" target="_blank">View on Credly →</a></div>
+      <div class="cert-card reveal"><div class="cert-name">SAP Certified — SAP Ariba</div><div class="cert-org">SAP SE</div><a class="cert-lnk" href="https://www.credly.com/badges/dc22b266-f4ed-4bc5-9dad-1b0b67af6e73/public_url" target="_blank">View on Credly →</a></div>
+      <div class="cert-card reveal"><div class="cert-name">Microsoft Azure Fundamentals AZ-900</div><div class="cert-org">Microsoft</div><div class="cert-lnk">✓ Active</div></div>
+      <div class="cert-card reveal"><div class="cert-name">Microsoft Power BI</div><div class="cert-org">Udemy</div><a class="cert-lnk" href="https://www.udemy.com/certificate/UC-051268d9-da2f-43ad-a3f6-a3f7f5605d26/" target="_blank">View Certificate →</a></div>
+      <div class="cert-card reveal"><div class="cert-name">SQL / PL-SQL</div><div class="cert-org">Udemy</div><a class="cert-lnk" href="https://www.udemy.com/certificate/UC-4451808d-8434-41f5-9bb0-2142bac5e539/" target="_blank">View Certificate →</a></div>
+      <div class="cert-card reveal"><div class="cert-name">Python Programming</div><div class="cert-org">Udemy</div><a class="cert-lnk" href="https://www.udemy.com/certificate/UC-7d4c3100-1881-4fb6-b6eb-fdca95fd6372/" target="_blank">View Certificate →</a></div>
+      <div class="cert-card reveal"><div class="cert-name">Linux</div><div class="cert-org">Udemy</div><a class="cert-lnk" href="https://www.udemy.com/certificate/UC-8146dcf0-6c2b-4c00-aa73-6669cb9bff59/" target="_blank">View Certificate →</a></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ── EDUCATION ── -->
+<section id="education">
+  <div class="wrap">
+    <div class="sec-eyebrow">Education</div>
+    <div class="sec-head">Academic <em>background</em></div>
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <div class="edu-school">Purdue University</div>
+        <div class="edu-deg">Master of Science — Engineering Management (MEM)<br>Specialized in Industrial Engineering</div>
+        <div class="edu-gpa">GPA 3.7 / 4.0 · Expected May 2026</div>
+        <div class="edu-note">Focus on operations, systems engineering, and project management in industrial and technology contexts.</div>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-school">Gujarat Technological University</div>
+        <div class="edu-deg">Bachelor of Engineering — Mechanical Engineering</div>
+        <div class="edu-gpa">GPA 3.89 / 4.0 · Jun 2021</div>
+        <div class="edu-note">Ranked 1st in the Department (2021). Strong foundation in systems thinking, manufacturing, and engineering design.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ── PROJECTS ── -->
+<section id="projects" class="alt">
+  <div class="wrap">
+    <div class="sec-eyebrow">Consulting Projects</div>
+    <div class="sec-head">Independent <em>work</em></div>
+    <div class="proj-grid">
+      <div class="proj-card reveal">
+        <div class="proj-head">Sunspectra — Sunscreen Manufacturing Optimization</div>
+        <div class="proj-tag">Strategy Consultant · Jan 2026 – Present</div>
+        <div class="proj-body">Redesigned the bottle-filling workflow by mapping current-state operations, identifying bottlenecks, and proposing an optimized layout projected to increase <strong>throughput by 18%</strong> and reduce <strong>changeover time by 25%</strong>.</div>
+      </div>
+      <div class="proj-card reveal">
+        <div class="proj-head">TVF Textile Firm — Freight Cost Forecasting</div>
+        <div class="proj-tag">Strategy Consultant · Aug – Dec 2024</div>
+        <div class="proj-body">Led a team of 5 to build a <strong>Python-based ML model</strong> for freight cost forecasting — helped lock in rates before market spikes, achieving <strong>$150,000 in savings</strong> versus spot prices.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-eyebrow">Contact</div>
+    <div class="sec-head">Let's <em>connect</em></div>
+    <div class="contact-row">
+      <div class="contact-card reveal">
+        <div class="c-icon">✉️</div>
+        <div class="c-label">Email</div>
+        <a class="c-val" href="mailto:mgidwani@purdue.edu">mgidwani@purdue.edu</a>
+      </div>
+      <div class="contact-card reveal">
+        <div class="c-icon">💼</div>
+        <div class="c-label">LinkedIn</div>
+        <a class="c-val" href="https://linkedin.com/in/maheshgidwanii" target="_blank">linkedin.com/in/maheshgidwanii</a>
+      </div>
+      <div class="contact-card reveal">
+        <div class="c-icon">📞</div>
+        <div class="c-label">Phone</div>
+        <a class="c-val" href="tel:7654099862">765-409-9862</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <span>Mahesh Gidwani, PMP®</span> · Purdue MEM 2026 · Open to Full-Time Opportunities
+</footer>
+
+<script>
+  // Sticky nav shadow
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal, .reveal-left').forEach(el => observer.observe(el));
+
+  // Stat counter animation
+  function animateValue(el, start, end, duration, prefix='', suffix='') {
+    let startTime = null;
+    const step = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const val = Math.floor(progress * (end - start) + start);
+      el.textContent = prefix + val.toLocaleString() + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  // Trigger stat animation on hero visibility
+  const heroObserver = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      heroObserver.disconnect();
+    }
+  }, { threshold: 0.5 });
+  heroObserver.observe(document.querySelector('.hero'));
+</script>
+</body>
+</html>
