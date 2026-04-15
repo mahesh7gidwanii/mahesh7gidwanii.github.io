@@ -148,19 +148,23 @@
   /* ── About ── */
   .about-grid { display: grid; grid-template-columns: 200px 1fr; gap: 40px; align-items: start; }
   .avatar-box {
-    width: 180px; height: 180px;
-    background: var(--grad);
+    width: 200px; height: 200px;
     border-radius: 20px;
-    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
-    box-shadow: 0 12px 40px rgba(26,86,219,0.3);
-    position: relative; overflow: hidden;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(26,86,219,0.25), 0 0 0 4px white, 0 0 0 6px var(--blue);
+    position: relative;
+    flex-shrink: 0;
   }
-  .avatar-box::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+  .avatar-box img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 0.4s ease;
   }
-  .avatar-initials { font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 700; color: white; line-height: 1; position: relative; }
-  .avatar-sub { font-size: 11px; color: rgba(255,255,255,0.8); letter-spacing: 2px; font-weight: 500; position: relative; }
+  .avatar-box:hover img { transform: scale(1.05); }
+  .avatar-initials { display: none; }
+  .avatar-sub { display: none; }
 
   .bio-text { font-size: 14.5px; color: var(--mid); line-height: 1.75; }
   .bio-text p+p { margin-top: 14px; }
@@ -369,8 +373,7 @@
     <div class="about-grid reveal">
       <div>
         <div class="avatar-box">
-          <div class="avatar-initials">MG</div>
-          <div class="avatar-sub">PMP®</div>
+          <img src="profile.jpg" alt="Mahesh Gidwani" />
         </div>
       </div>
       <div>
