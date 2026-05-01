@@ -456,6 +456,42 @@ nav.scrolled { box-shadow: 0 4px 24px rgba(26,86,219,0.08); }
 .lead-sub { font-size: 11.5px; color: var(--blue); font-weight: 500; margin-bottom: 10px; }
 .lead-body { font-size: 12.5px; color: var(--mid); line-height: 1.6; }
 
+/* ── Accolades / Testimonials ── */
+.accolades-intro { font-size: 14.5px; color: var(--mid); line-height: 1.75; max-width: 640px; margin-bottom: 32px; }
+.accolades-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.accolade-card {
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: 14px; padding: 22px 20px 18px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative; overflow: hidden;
+}
+.accolade-card::before {
+  content: '\201C'; position: absolute; top: -10px; left: 14px;
+  font-size: 90px; font-family: 'Playfair Display', serif;
+  color: var(--blue); opacity: 0.08; line-height: 1; pointer-events: none;
+}
+.accolade-card:hover { box-shadow: 0 10px 36px rgba(26,86,219,0.13); transform: translateY(-3px); }
+.accolade-quote {
+  font-size: 13.5px; color: var(--mid); line-height: 1.75;
+  font-style: italic; position: relative; z-index: 1;
+}
+.accolade-context {
+  font-size: 10.5px; color: var(--blue); margin-top: 12px;
+  background: var(--blue-light); border-radius: 6px; padding: 4px 10px;
+  display: inline-block; font-weight: 500; font-style: normal;
+}
+.accolade-author { margin-top: 14px; display: flex; align-items: center; gap: 10px; }
+.accolade-avatar {
+  width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0;
+  background: var(--grad); display: flex; align-items: center; justify-content: center;
+  color: white; font-weight: 700; font-size: 13px; letter-spacing: -0.5px;
+}
+.accolade-info { flex: 1; }
+.accolade-name { font-size: 13px; font-weight: 600; color: var(--dark); }
+.accolade-role { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.accolade-stars { color: #f59e0b; font-size: 10px; letter-spacing: 1px; }
+.accolade-slack { font-size: 10px; color: var(--muted); display: flex; align-items: center; gap: 3px; margin-top: 2px; }
+
 /* ── Footer ── */
 footer {
   text-align: center; padding: 2.5rem 2rem 2rem;
@@ -484,7 +520,7 @@ footer {
 @media(max-width:700px) {
   .hero-name { font-size: 32px; }
   .about-grid, .skill-groups, .cert-grid, .edu-grid, .proj-grid,
-  .contact-row, .leadership-grid { grid-template-columns: 1fr; }
+  .contact-row, .leadership-grid, .accolades-grid { grid-template-columns: 1fr; }
   nav { padding: 0 1rem; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
@@ -507,6 +543,7 @@ footer {
   <a href="#education" onclick="closeMobileMenu()">Education</a>
   <a href="#projects" onclick="closeMobileMenu()">Projects</a>
   <a href="#leadership" onclick="closeMobileMenu()">More</a>
+  <a href="#accolades" onclick="closeMobileMenu()">Kudos</a>
   <a href="#contact" onclick="closeMobileMenu()">Contact</a>
 </div>
 
@@ -524,6 +561,7 @@ footer {
     <li><a href="#education">Education</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#leadership">More</a></li>
+    <li><a href="#accolades">Kudos</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <button class="theme-toggle" id="theme-toggle" title="Toggle dark mode">🌙</button>
@@ -996,6 +1034,146 @@ footer {
         <div class="lead-sub">DevCon 2025 · Amazon Robotics</div>
         <div class="lead-body">Evaluated GenAI and agentic AI architectures across 3 enterprise use cases — multi-agent ticket triage, LLM-enriched data pipelines, and Bedrock vs. OpenAI tradeoffs for Oracle-SAP environments. Produced enablement documentation adopted by BASE engineering.</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ACCOLADES -->
+<section id="accolades" class="alt">
+  <div class="wrap">
+    <div class="sec-eyebrow">Accolades</div>
+    <div class="sec-head">Kind words from <em>stakeholders</em></div>
+    <p class="accolades-intro">Real messages from teammates, managers, and stakeholders at Amazon Robotics — captured directly from Slack. Nothing builds a reputation like the people who worked alongside you.</p>
+    <div class="accolades-grid">
+
+      <!-- Usman Anwar -->
+      <div class="accolade-card reveal">
+        <div class="accolade-quote">"This is fantastic, Mahesh, will share with the team. I demo'd with the team today and got <strong>significant positive feedback</strong> on the value add of the process."</div>
+        <div class="accolade-context">🛠 Mass Update Utility · Nov 2024</div>
+        <div class="accolade-author">
+          <div class="accolade-avatar">UA</div>
+          <div class="accolade-info">
+            <div class="accolade-name">Usman Anwar</div>
+            <div class="accolade-role">UAT Lead · Amazon Robotics</div>
+            <div class="accolade-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phil Conlon via Wajid -->
+      <div class="accolade-card reveal">
+        <div class="accolade-quote">"That is <strong>freakin awesome</strong>!" <span style="font-size:12px; font-style:normal;">🔥🔥🔥</span><br><br><em style="font-size:12px; color:var(--muted); font-style:normal;">Shared by Wajid Mohammed Abdul: "@mgidwan — this is for you! Phil is super happy with the mass upload tool! :-)"</em></div>
+        <div class="accolade-context">📦 Mass Upload Tool · Nov 2024</div>
+        <div class="accolade-author">
+          <div class="accolade-avatar">PC</div>
+          <div class="accolade-info">
+            <div class="accolade-name">Phil Conlon</div>
+            <div class="accolade-role">Senior Stakeholder · Amazon Robotics</div>
+            <div class="accolade-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rajath AV -->
+      <div class="accolade-card reveal">
+        <div class="accolade-quote">"What an <strong>amazing presentation</strong>! You called out the impacts so well 🙏👏"</div>
+        <div class="accolade-context">🎤 Stakeholder Presentation · Jun 2025</div>
+        <div class="accolade-author">
+          <div class="accolade-avatar">RA</div>
+          <div class="accolade-info">
+            <div class="accolade-name">Rajath AV</div>
+            <div class="accolade-role">Team Lead · Amazon Robotics BASE</div>
+            <div class="accolade-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pujan Kakkad -->
+      <div class="accolade-card reveal">
+        <div class="accolade-quote">"<strong>Fantastic presentation</strong> Mahesh! 😄🙌 Very well delivered — loved the structure and the clarity on impact numbers."</div>
+        <div class="accolade-context">🎤 Stakeholder Presentation · Jun 2025</div>
+        <div class="accolade-author">
+          <div class="accolade-avatar">PK</div>
+          <div class="accolade-info">
+            <div class="accolade-name">Pujan Kakkad</div>
+            <div class="accolade-role">Engineer · Amazon Robotics BASE</div>
+            <div class="accolade-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Anju Gutta -->
+      <div class="accolade-card reveal">
+        <div class="accolade-quote">"<strong>Great Job</strong> @mgidwan, you crossed 400lbs in presentation 👏😄 — you used a great catch phrase to get <strong>everybody's full attention</strong>."</div>
+        <div class="accolade-context">🎤 Stakeholder Presentation · Jun 2025</div>
+        <div class="accolade-author">
+          <div class="accolade-avatar">AG</div>
+          <div class="accolade-info">
+            <div class="accolade-name">Anju Gutta</div>
+            <div class="accolade-role">Engineer · Amazon Robotics BASE</div>
+            <div class="accolade-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subburaj Gurusamy -->
+      <div class="accolade-card reveal">
+        <div class="accolade-quote">"<strong>Very well presented.</strong> 👏👍 You used a great catch phrase — '400 lbs deadlift' to get everybody's full attention. 😏"</div>
+        <div class="accolade-context">🎤 Stakeholder Presentation · Jun 2025</div>
+        <div class="accolade-author">
+          <div class="accolade-avatar">SG</div>
+          <div class="accolade-info">
+            <div class="accolade-name">Subburaj Gurusamy</div>
+            <div class="accolade-role">Senior Engineer · Amazon Robotics BASE</div>
+            <div class="accolade-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Khin Khine -->
+      <div class="accolade-card reveal">
+        <div class="accolade-quote">"Come back!! 😭 Hopefully the <strong>headcount gods are in your favor</strong> 😎 — it's been amazing having you on the team."</div>
+        <div class="accolade-context">👋 End of Co-op · Dec 2024</div>
+        <div class="accolade-author">
+          <div class="accolade-avatar">KK</div>
+          <div class="accolade-info">
+            <div class="accolade-name">Khin Khine</div>
+            <div class="accolade-role">Software Development Engineer · Amazon Robotics</div>
+            <div class="accolade-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tyler Jackson -->
+      <div class="accolade-card reveal">
+        <div class="accolade-quote">"I'm <strong>really going to miss you</strong>. You made everything look so easy — it was a pleasure working alongside you. 🙏"</div>
+        <div class="accolade-context">👋 End of Co-op · Dec 2024</div>
+        <div class="accolade-author">
+          <div class="accolade-avatar">TJ</div>
+          <div class="accolade-info">
+            <div class="accolade-name">Tyler Jackson</div>
+            <div class="accolade-role">Team Member · Amazon Robotics</div>
+            <div class="accolade-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Srinivas Adapaka -->
+      <div class="accolade-card reveal">
+        <div class="accolade-quote">"Yes, <strong>Great job</strong> @mgidwan 🙌 — the presentation was sharp, focused, and you really highlighted the key impacts clearly."</div>
+        <div class="accolade-context">🎤 Stakeholder Presentation · Jun 2025</div>
+        <div class="accolade-author">
+          <div class="accolade-avatar">SA</div>
+          <div class="accolade-info">
+            <div class="accolade-name">Srinivas Adapaka</div>
+            <div class="accolade-role">Engineer · Amazon Robotics BASE</div>
+            <div class="accolade-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
