@@ -3,1431 +3,1189 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mahesh Gidwani, PMP® — ERP Consultant & TPM</title>
+<title>Mahesh Gidwani — ERP Consultant & TPM</title>
 
-<!-- ── Favicon ── -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231a56db'/><text font-size='52' font-family='serif' font-weight='700' fill='white' x='50%' y='54%' text-anchor='middle' dominant-baseline='middle'>MG</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='8' fill='%231a1a1a'/><text font-size='54' font-family='Georgia,serif' font-weight='700' fill='%23faf8f3' x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle'>M</text></svg>">
 
-<!-- ── Meta / LinkedIn OG ── -->
-<meta property="og:title" content="Mahesh Gidwani, PMP® — ERP Consultant & TPM">
-<meta property="og:description" content="PMP-certified ERP Consultant & TPM. Amazon Robotics · Wipro · Purdue MEM. $1.7M saved. SAP S/4HANA + Oracle EBS expert. Open to full-time May 2026.">
+<meta property="og:title" content="Mahesh Gidwani — ERP Consultant & TPM">
+<meta property="og:description" content="ERP Consultant & Technical Program Manager. Amazon Robotics, Wipro, Purdue MEM. $1.7M saved. Open to full-time May 2026.">
 <meta property="og:image" content="https://mahesh7gidwanii.github.io/profile.jpg">
 <meta property="og:url" content="https://mahesh7gidwanii.github.io">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="description" content="Portfolio of Mahesh Gidwani, PMP® — ERP Consultant & Technical Program Manager. Oracle EBS, SAP S/4HANA, Amazon Robotics, Purdue MEM 2026. Open to full-time roles.">
+<meta name="description" content="Personal site of Mahesh Gidwani. ERP Consultant & Technical Program Manager. Oracle EBS, SAP S/4HANA, Amazon Robotics, Purdue MEM 2026.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&display=swap" rel="stylesheet">
 
 <style>
-/* ── Reset & Variables ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --blue: #1a56db;
-  --blue-light: #e8f0fb;
-  --dark: #0f172a;
-  --mid: #334155;
-  --muted: #64748b;
-  --border: #e2e8f0;
-  --bg: #f8fafc;
-  --white: #ffffff;
-  --green: #166534;
-  --green-bg: #dcfce7;
-  --amber: #92400e;
-  --amber-bg: #fef3c7;
-  --grad: linear-gradient(135deg, #1a56db 0%, #7c3aed 100%);
-  --nav-bg: rgba(255,255,255,0.88);
-  --card-bg: #ffffff;
-  --footer-bg: #0f172a;
-  --footer-text: #64748b;
-  --section-alt: #f8fafc;
+  --bg: #faf8f3;
+  --paper: #ffffff;
+  --paper-warm: #f5f1e8;
+  --ink: #1a1a1a;
+  --ink-soft: #2e2e2e;
+  --body: #3d3d3d;
+  --muted: #6b6b6b;
+  --rule: #d8d2c3;
+  --border: #e8e2d4;
+  --accent: #b8410e;
+  --accent-deep: #8a3209;
+  --accent-soft: #fbf2eb;
 }
 
 [data-theme="dark"] {
-  --dark: #f1f5f9;
-  --mid: #cbd5e1;
-  --muted: #94a3b8;
-  --border: #1e293b;
-  --bg: #0f172a;
-  --white: #1e293b;
-  --green: #4ade80;
-  --green-bg: #052e16;
-  --amber: #fbbf24;
-  --amber-bg: #1c1400;
-  --blue-light: rgba(30,58,138,0.2);
-  --nav-bg: rgba(15,23,42,0.92);
-  --card-bg: #1e293b;
-  --footer-bg: #020617;
-  --footer-text: #475569;
-  --section-alt: #111827;
+  --bg: #14120e;
+  --paper: #1e1b15;
+  --paper-warm: #25221c;
+  --ink: #f5f1e8;
+  --ink-soft: #e8e2d4;
+  --body: #c4bfb3;
+  --muted: #8a8478;
+  --rule: #3a362e;
+  --border: #3a362e;
+  --accent: #e07a3b;
+  --accent-deep: #f5a05e;
+  --accent-soft: #25221c;
 }
 
 html { scroll-behavior: smooth; }
 body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--body);
+  background: var(--bg);
+  font-size: 16px;
+  line-height: 1.65;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--accent); color: var(--bg); }
+
+a { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--accent-deep); }
+
+/* ── Layout containers ── */
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 32px; }
+.wrap-narrow { max-width: 720px; margin: 0 auto; padding: 0 32px; }
+.section { padding: 96px 0; }
+.section-tight { padding: 64px 0; }
+.bg-paper { background: var(--paper); }
+.bg-warm { background: var(--paper-warm); }
+.rule { height: 1px; background: var(--rule); border: 0; }
+
+/* ── Typography ── */
+.kicker {
   font-family: 'Inter', sans-serif;
-  color: var(--dark); background: var(--white);
-  overflow-x: hidden; transition: background 0.3s, color 0.3s;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
 }
 
-/* ── Scroll Progress Bar ── */
-#progress-bar {
-  position: fixed; top: 0; left: 0; height: 3px; width: 0%;
-  background: var(--grad); z-index: 9999;
-  transition: width 0.1s linear;
-  box-shadow: 0 0 8px rgba(26,86,219,0.6);
+.display {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 900;
+  font-size: clamp(54px, 9vw, 104px);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  font-variation-settings: 'opsz' 144;
 }
 
-/* ── Back to Top ── */
-#back-to-top {
-  position: fixed; bottom: 28px; right: 28px; z-index: 500;
-  width: 44px; height: 44px; border-radius: 50%;
-  background: var(--grad); color: white;
-  border: none; cursor: pointer; font-size: 18px;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 20px rgba(26,86,219,0.4);
-  opacity: 0; transform: translateY(12px);
-  transition: opacity 0.3s, transform 0.3s; pointer-events: none;
+.h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(34px, 4.5vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 28px;
 }
-#back-to-top.show { opacity: 1; transform: none; pointer-events: auto; }
-#back-to-top:hover { transform: translateY(-2px); }
 
-/* ── Scrollbar ── */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 3px; }
+.h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(22px, 2.6vw, 30px);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.lede {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.45;
+  font-weight: 400;
+  color: var(--ink-soft);
+  font-variation-settings: 'opsz' 36;
+  letter-spacing: -0.01em;
+}
+
+.lede-small {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  max-width: 60ch;
+  margin-bottom: 36px;
+}
 
 /* ── Nav ── */
-nav {
-  position: sticky; top: 0; z-index: 200;
-  background: var(--nav-bg); backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border);
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--bg);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, background 0.2s;
+}
+.nav.scrolled { border-bottom-color: var(--rule); }
+.nav-inner {
+  max-width: 1180px; margin: 0 auto;
+  padding: 18px 32px;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 2.5rem; height: 56px;
-  transition: box-shadow 0.3s, background 0.3s;
 }
-nav.scrolled { box-shadow: 0 4px 24px rgba(26,86,219,0.08); }
-.nav-brand {
-  font-family: 'Playfair Display', serif;
-  font-size: 17px; color: var(--dark); text-decoration: none;
-  display: flex; align-items: center; gap: 8px; flex-shrink: 0;
+.brand {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -0.01em;
 }
-.nav-dot { width: 8px; height: 8px; background: var(--grad); border-radius: 50%; }
-.nav-links { display: flex; gap: 20px; list-style: none; align-items: center; }
+.brand:hover { color: var(--ink); }
+.brand-dot { color: var(--accent); }
+.nav-links {
+  display: flex; gap: 32px; list-style: none; align-items: center;
+}
 .nav-links a {
-  font-size: 12.5px; color: var(--muted); text-decoration: none;
-  font-weight: 500; padding-bottom: 2px;
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s, border-color 0.2s;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--body);
+  text-decoration: none;
+  letter-spacing: -0.005em;
+  transition: color 0.15s;
 }
-.nav-links a:hover, .nav-links a.active { color: var(--blue); border-bottom-color: var(--blue); }
-
+.nav-links a:hover, .nav-links a.active { color: var(--accent); }
 .theme-toggle {
-  background: var(--blue-light); border: 1px solid var(--border);
-  color: var(--blue); border-radius: 8px;
-  width: 34px; height: 34px; cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 16px; transition: background 0.2s; flex-shrink: 0; margin-left: 8px;
+  background: none; border: 1px solid var(--rule);
+  color: var(--body); cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px; font-weight: 500;
+  padding: 6px 12px; border-radius: 4px;
+  letter-spacing: 0.02em;
+  transition: border-color 0.15s, color 0.15s;
+  margin-left: 24px;
 }
-.theme-toggle:hover { background: var(--blue); color: white; }
+.theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
 
-.hamburger {
-  display: none; flex-direction: column; gap: 5px;
-  background: none; border: none; cursor: pointer; padding: 6px;
-}
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px 0 8px 12px; }
 .hamburger span {
-  display: block; width: 22px; height: 2px;
-  background: var(--dark); border-radius: 2px; transition: all 0.3s;
+  display: block; width: 22px; height: 1.5px;
+  background: var(--ink); margin: 5px 0; transition: all 0.25s;
 }
-.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
+.hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 .mobile-menu {
-  display: none; position: fixed; inset: 56px 0 0 0;
-  background: var(--nav-bg); backdrop-filter: blur(14px);
-  z-index: 190; flex-direction: column; align-items: center;
-  justify-content: center; gap: 28px; border-top: 1px solid var(--border);
+  display: none; position: fixed; inset: 60px 0 0 0;
+  background: var(--bg); z-index: 90;
+  flex-direction: column; padding: 48px 32px;
+  gap: 28px; border-top: 1px solid var(--rule);
 }
 .mobile-menu.open { display: flex; }
-.mobile-menu a { font-size: 20px; color: var(--dark); text-decoration: none; font-weight: 600; transition: color 0.2s; }
-.mobile-menu a:hover { color: var(--blue); }
+.mobile-menu a {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 30px; font-weight: 700; color: var(--ink);
+  text-decoration: none;
+}
 
 /* ── Hero ── */
-.hero {
-  position: relative; overflow: hidden;
-  background: linear-gradient(160deg, #0f172a 0%, #1e3a8a 60%, #1a56db 100%);
-  padding: 4.5rem 2.5rem 5rem; text-align: center; color: white;
+.hero { padding: 56px 0 96px; }
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: 56px;
+  align-items: end;
 }
-.hero-bg-grid {
-  position: absolute; inset: 0; pointer-events: none;
-  background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-  background-size: 40px 40px; animation: gridMove 20s linear infinite;
+.hero-display-name { margin-bottom: 28px; }
+.hero-display-name .period { color: var(--accent); }
+.hero-lede { max-width: 30ch; margin-bottom: 36px; }
+.hero-actions {
+  display: flex; align-items: baseline; gap: 24px; flex-wrap: wrap;
+  margin-bottom: 40px;
 }
-@keyframes gridMove { 0%{transform:translateY(0)} 100%{transform:translateY(40px)} }
+.btn-primary {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--bg);
+  padding: 14px 22px;
+  font-size: 15px; font-weight: 500;
+  letter-spacing: -0.005em;
+  text-decoration: none;
+  border-radius: 2px;
+  border: 1px solid var(--ink);
+  transition: background 0.15s, color 0.15s;
+}
+.btn-primary:hover { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.link-subtle {
+  font-size: 14px; color: var(--body);
+  text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px;
+  text-decoration-color: var(--rule);
+  transition: text-decoration-color 0.15s, color 0.15s;
+}
+.link-subtle:hover { color: var(--accent); text-decoration-color: var(--accent); }
+.hero-meta {
+  font-size: 13px; color: var(--muted);
+  letter-spacing: 0.02em;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  max-width: 36em;
+}
+.hero-meta strong { color: var(--ink); font-weight: 600; }
 
-.hero-photo-wrap {
-  width: 112px; height: 112px; border-radius: 50%;
-  background: var(--grad); padding: 3px;
-  margin: 0 auto 22px; position: relative; z-index: 1;
-  animation: fadeDown 0.55s ease both;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+.hero-portrait {
+  position: relative;
 }
-.hero-photo-wrap img {
-  width: 100%; height: 100%; border-radius: 50%;
-  object-fit: cover; object-position: center top;
-  border: 3px solid rgba(255,255,255,0.9); display: block;
+.hero-portrait img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+  filter: grayscale(0.15) contrast(1.02);
 }
-
-.hero-pill {
-  display: inline-flex; align-items: center; gap: 7px;
-  background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
-  backdrop-filter: blur(8px); color: #93c5fd; font-size: 12px; font-weight: 500;
-  padding: 6px 16px; border-radius: 20px; margin-bottom: 18px;
-  animation: fadeDown 0.6s 0.1s ease both;
-}
-.pill-dot { width: 6px; height: 6px; background: #34d399; border-radius: 50%; animation: pulse 2s infinite; }
-@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.4)} }
-
-.hero-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 52px; font-weight: 700; line-height: 1.1;
-  background: linear-gradient(135deg, #fff 40%, #93c5fd 100%);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  margin-bottom: 12px; animation: fadeDown 0.7s 0.2s ease both;
-}
-.hero-sub {
-  font-size: 15.5px; color: #94a3b8; max-width: 640px;
-  margin: 0 auto 28px; line-height: 1.75; font-weight: 400;
-  animation: fadeDown 0.7s 0.3s ease both;
-}
-.hero-sub span { color: #93c5fd; font-weight: 500; }
-
-.stats-row {
-  display: flex; justify-content: center; gap: 10px;
-  flex-wrap: wrap; margin-bottom: 30px;
-  animation: fadeUp 0.7s 0.4s ease both;
-}
-.stat-pill {
-  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
-  backdrop-filter: blur(8px); border-radius: 14px;
-  padding: 13px 18px; min-width: 125px; text-align: center;
-  transition: transform 0.2s, background 0.2s;
-}
-.stat-pill:hover { transform: translateY(-3px); background: rgba(255,255,255,0.12); }
-.stat-val { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: white; }
-.stat-lbl { font-size: 10px; color: #94a3b8; margin-top: 4px; line-height: 1.4; }
-
-.hero-btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; animation: fadeUp 0.7s 0.5s ease both; }
-.btn-p {
-  background: white; color: var(--dark); border: none;
-  padding: 11px 26px; border-radius: 10px; font-size: 13.5px; font-weight: 600;
-  cursor: pointer; text-decoration: none;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-}
-.btn-p:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.4); }
-.btn-s {
-  background: transparent; color: white;
-  border: 1px solid rgba(255,255,255,0.3); padding: 11px 26px; border-radius: 10px;
-  font-size: 13.5px; font-weight: 500; cursor: pointer; text-decoration: none;
-  backdrop-filter: blur(8px); transition: background 0.2s, transform 0.2s;
-}
-.btn-s:hover { background: rgba(255,255,255,0.1); transform: translateY(-2px); }
-.btn-resume {
-  background: rgba(52,211,153,0.15); color: #34d399;
-  border: 1px solid rgba(52,211,153,0.35); padding: 11px 26px; border-radius: 10px;
-  font-size: 13.5px; font-weight: 500; cursor: pointer; text-decoration: none;
-  backdrop-filter: blur(8px); transition: background 0.2s, transform 0.2s;
-}
-.btn-resume:hover { background: rgba(52,211,153,0.25); transform: translateY(-2px); }
-
-.available-badge {
-  display: inline-flex; align-items: center; gap: 6px;
-  margin-top: 22px;
-  background: rgba(52,211,153,0.15); border: 1px solid rgba(52,211,153,0.3);
-  color: #34d399; font-size: 11px; font-weight: 500;
-  padding: 5px 14px; border-radius: 20px;
-  animation: fadeUp 0.7s 0.6s ease both;
+.hero-portrait figcaption {
+  margin-top: 12px;
+  font-size: 12px; color: var(--muted);
+  font-style: italic;
+  font-family: 'Fraunces', Georgia, serif;
+  letter-spacing: -0.005em;
 }
 
-/* ── Sections ── */
-.wrap { max-width: 980px; margin: 0 auto; padding: 4rem 2.5rem; }
-.sec-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--blue); margin-bottom: 8px; }
-.sec-head { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--dark); margin-bottom: 32px; }
-.sec-head em { font-style: normal; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.alt { background: var(--section-alt); }
-.section-divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); margin: 0 2.5rem; }
+/* ── Section header ── */
+.section-head { margin-bottom: 56px; max-width: 720px; }
 
-/* ── About ── */
-.about-grid { display: grid; grid-template-columns: 220px 1fr; gap: 44px; align-items: start; }
-.about-photo-wrap {
-  width: 200px; height: 200px; border-radius: 50%;
-  background: var(--grad); padding: 4px;
-  box-shadow: 0 12px 40px rgba(26,86,219,0.25); flex-shrink: 0;
-  transition: transform 0.3s;
+/* ── Prose ── */
+.prose { font-size: 17px; line-height: 1.75; color: var(--body); max-width: 65ch; }
+.prose p + p { margin-top: 22px; }
+.prose strong { color: var(--ink); font-weight: 600; }
+.prose em { font-style: italic; }
+.prose .drop::first-letter {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 900;
+  font-size: 4.2em;
+  float: left;
+  line-height: 0.82;
+  padding: 6px 10px 0 0;
+  color: var(--accent);
 }
-.about-photo-wrap:hover { transform: scale(1.03); }
-.about-photo-wrap img {
-  width: 100%; height: 100%; border-radius: 50%;
-  object-fit: cover; object-position: center top;
-  border: 4px solid var(--white); display: block;
-}
-.bio-text { font-size: 14.5px; color: var(--mid); line-height: 1.8; }
-.bio-text p+p { margin-top: 14px; }
-.bio-text strong { color: var(--dark); }
-.looking-box {
-  margin-top: 20px;
-  background: linear-gradient(135deg, var(--blue-light), transparent);
-  border: 1px solid rgba(199,215,249,0.6);
-  border-left: 3px solid var(--blue);
-  border-radius: 10px; padding: 14px 16px;
-  font-size: 13.5px; color: var(--mid); line-height: 1.6;
-}
-.looking-box strong { color: var(--dark); }
 
-/* About value chips */
-.value-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-.vchip {
-  background: var(--bg); border: 1px solid var(--border);
-  color: var(--mid); font-size: 12px; font-weight: 500;
-  padding: 5px 12px; border-radius: 20px;
-  display: flex; align-items: center; gap: 5px;
+.currently {
+  margin-top: 48px;
+  padding: 20px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
 }
-.vchip .dot { width: 6px; height: 6px; background: var(--grad); border-radius: 50%; flex-shrink: 0; }
+.currently p { font-size: 15px; line-height: 1.7; color: var(--ink-soft); }
+.currently-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-right: 12px;
+  vertical-align: 1px;
+}
 
-/* ── Timeline ── */
-.timeline { padding-left: 28px; position: relative; }
-.timeline::before { content: ''; position: absolute; left: 7px; top: 10px; bottom: 20px; width: 2px; background: linear-gradient(180deg, var(--blue), #7c3aed, var(--border)); border-radius: 2px; }
-.tl-item { position: relative; margin-bottom: 36px; }
-.tl-item:last-child { margin-bottom: 0; }
-.tl-dot {
-  position: absolute; left: -21px; top: 6px;
-  width: 12px; height: 12px; border-radius: 50%;
-  background: var(--grad); border: 3px solid var(--white);
-  box-shadow: 0 0 0 2px var(--blue);
+/* ── Work / Experience ── */
+.work-list { display: flex; flex-direction: column; }
+.work-item {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 48px;
+  padding: 48px 0;
+  border-top: 1px solid var(--rule);
 }
-.tl-card {
-  background: var(--card-bg); border: 1px solid var(--border);
-  border-radius: 14px; padding: 22px 24px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-  transition: box-shadow 0.3s, transform 0.3s;
+.work-item:first-child { border-top: 1px solid var(--ink); }
+.work-item:last-child { border-bottom: 1px solid var(--rule); }
+.work-meta { padding-top: 6px; }
+.work-date {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  letter-spacing: -0.005em;
+  margin-bottom: 4px;
 }
-.tl-card:hover { box-shadow: 0 8px 32px rgba(26,86,219,0.1); transform: translateY(-2px); }
-.tl-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; }
-.tl-co { font-size: 16px; font-weight: 700; color: var(--dark); }
-.tl-date { font-size: 11.5px; color: white; background: var(--grad); padding: 3px 10px; border-radius: 6px; font-weight: 500; white-space: nowrap; }
-.tl-role { font-size: 13px; color: var(--blue); font-weight: 500; margin: 4px 0 6px; }
-.tl-location { font-size: 11.5px; color: var(--muted); margin-bottom: 14px; }
-.tl-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-.tl-list li { font-size: 13px; line-height: 1.6; color: var(--mid); padding-left: 18px; position: relative; }
-.tl-list li::before { content: "▸"; position: absolute; left: 0; color: var(--blue); font-size: 10px; top: 4px; }
-.tl-list strong { color: var(--dark); font-weight: 600; }
+.work-loc {
+  font-size: 12px; color: var(--muted);
+  letter-spacing: 0.02em;
+}
+.work-co {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.work-role {
+  font-size: 14px;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+.work-headline {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin-bottom: 22px;
+  font-variation-settings: 'opsz' 36;
+  letter-spacing: -0.005em;
+}
+.work-headline strong { font-weight: 700; color: var(--ink); }
+.work-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.work-bullets li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--body);
+}
+.work-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 11px;
+  width: 12px; height: 1px;
+  background: var(--accent);
+}
+.work-bullets li strong { color: var(--ink); font-weight: 600; }
 
-/* Impact highlights inside cards */
-.tl-impact-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
-.impact-chip {
-  background: var(--green-bg); color: var(--green);
-  font-size: 11.5px; font-weight: 600;
-  padding: 4px 11px; border-radius: 20px;
-  border: 1px solid rgba(22,101,52,0.15);
+/* ── Toolkit (Skills + Certs) ── */
+.toolkit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px 64px;
+  margin-bottom: 72px;
 }
-[data-theme="dark"] .impact-chip { border-color: rgba(74,222,128,0.2); }
-
-/* ── Skills ── */
-.skill-groups { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-.skill-group-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
-.sg-title { font-size: 11px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; }
-.tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px; }
-.tag {
-  background: var(--bg); border: 1px solid var(--border);
-  color: var(--mid); font-size: 12px; font-weight: 500;
-  padding: 5px 12px; border-radius: 7px; cursor: default;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+.toolkit-col h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--ink);
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
 }
-.tag:hover { background: var(--blue-light); color: var(--blue); border-color: #c7d7f9; }
-
-.skill-bars { display: flex; flex-direction: column; gap: 10px; }
-.skill-bar-row { display: flex; flex-direction: column; gap: 4px; }
-.skill-bar-label { display: flex; justify-content: space-between; font-size: 11.5px; font-weight: 500; color: var(--mid); }
-.skill-bar-track { height: 6px; background: var(--border); border-radius: 6px; overflow: hidden; }
-.skill-bar-fill { height: 100%; border-radius: 6px; width: 0%; background: var(--grad); transition: width 1.2s cubic-bezier(.4,0,.2,1); }
-
-/* ── Certs ── */
-.cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.cert-card {
-  background: var(--card-bg); border: 1px solid var(--border);
-  border-radius: 12px; padding: 16px 18px;
-  transition: box-shadow 0.2s, transform 0.2s;
-  position: relative; overflow: hidden;
+.toolkit-list {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--body);
 }
-.cert-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--grad); }
-.cert-card:hover { box-shadow: 0 8px 24px rgba(26,86,219,0.1); transform: translateY(-2px); }
-.cert-badge { font-size: 26px; margin-bottom: 8px; display: block; }
-.cert-name { font-size: 13px; font-weight: 600; color: var(--dark); line-height: 1.4; }
-.cert-org { font-size: 11px; color: var(--muted); margin-top: 4px; }
-.cert-lnk { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; color: var(--blue); text-decoration: none; margin-top: 8px; font-weight: 500; }
-.cert-lnk:hover { text-decoration: underline; }
+.toolkit-list span:not(:last-child)::after {
+  content: ' · ';
+  color: var(--muted);
+  margin: 0 4px;
+}
+
+.certs-block { padding-top: 56px; border-top: 1px solid var(--rule); }
+.certs-block h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--ink);
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px 56px;
+}
+.cert-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  padding: 14px 0;
+  border-bottom: 1px dotted var(--rule);
+  gap: 16px;
+}
+.cert-name { font-size: 15px; color: var(--ink-soft); font-weight: 500; }
+.cert-name small { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; font-weight: 400; }
+.cert-action a, .cert-action span {
+  font-size: 12px; color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.cert-action a:hover { text-decoration: underline; }
+.cert-action span { color: var(--muted); }
 
 /* ── Education ── */
-.edu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-.edu-card {
-  background: var(--card-bg); border: 1px solid var(--border);
-  border-radius: 14px; padding: 24px 26px;
-  position: relative; overflow: hidden;
-  transition: box-shadow 0.2s, transform 0.2s;
+.edu-list { display: flex; flex-direction: column; }
+.edu-item {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 48px;
+  padding: 32px 0;
+  border-top: 1px solid var(--rule);
 }
-.edu-card::after {
-  content: ''; position: absolute; bottom: -30px; right: -30px;
-  width: 100px; height: 100px; border-radius: 50%;
-  background: var(--grad); opacity: 0.05;
-}
-.edu-card:hover { box-shadow: 0 8px 32px rgba(26,86,219,0.1); transform: translateY(-2px); }
-.edu-school { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--dark); }
-.edu-deg { font-size: 13.5px; color: var(--mid); margin: 6px 0 10px; line-height: 1.5; }
-.edu-gpa { font-size: 12.5px; font-weight: 600; color: var(--blue); background: var(--blue-light); display: inline-block; padding: 3px 10px; border-radius: 6px; }
-.edu-note { font-size: 12.5px; color: var(--muted); margin-top: 10px; line-height: 1.6; }
-.edu-courses { margin-top: 10px; font-size: 12px; color: var(--muted); }
-.edu-courses strong { color: var(--mid); }
+.edu-item:last-child { border-bottom: 1px solid var(--rule); }
+.edu-item:first-child { border-top: 1px solid var(--ink); }
+.edu-date { font-family: 'Fraunces', Georgia, serif; font-size: 14px; font-weight: 500; color: var(--ink-soft); }
+.edu-date small { display: block; font-size: 12px; color: var(--muted); margin-top: 4px; font-weight: 400; font-family: 'Inter', sans-serif; }
+.edu-school { font-family: 'Fraunces', Georgia, serif; font-size: 24px; font-weight: 700; color: var(--ink); letter-spacing: -0.015em; margin-bottom: 4px; }
+.edu-deg { font-size: 15px; color: var(--ink-soft); margin-bottom: 12px; }
+.edu-note { font-size: 14px; color: var(--body); line-height: 1.6; }
+.edu-note strong { color: var(--ink); }
 
 /* ── Projects ── */
-.proj-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-.proj-card {
-  background: var(--card-bg); border: 1px solid var(--border);
-  border-radius: 14px; padding: 22px 24px;
-  transition: box-shadow 0.3s, transform 0.3s;
-  position: relative; overflow: hidden;
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
 }
-.proj-card::before {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(135deg, var(--blue-light) 0%, transparent 60%);
-  opacity: 0; transition: opacity 0.3s;
+.proj-item {}
+.proj-date { font-size: 12px; color: var(--muted); letter-spacing: 0.02em; margin-bottom: 8px; text-transform: uppercase; font-weight: 500; }
+.proj-h {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 16px;
+  letter-spacing: -0.015em;
 }
-.proj-card:hover::before { opacity: 1; }
-.proj-card:hover { box-shadow: 0 12px 40px rgba(26,86,219,0.12); transform: translateY(-3px); }
-.proj-head { font-size: 14.5px; font-weight: 700; color: var(--dark); position: relative; }
-.proj-tag { display: inline-block; background: var(--green-bg); color: var(--green); font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 5px; margin: 8px 0 10px; position: relative; }
-.proj-body { font-size: 13px; color: var(--mid); line-height: 1.65; position: relative; }
-.proj-body strong { color: var(--dark); }
-.proj-metrics { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
-.proj-metric {
-  background: var(--amber-bg); color: var(--amber);
-  font-size: 11px; font-weight: 600;
-  padding: 3px 10px; border-radius: 5px; position: relative;
+.proj-body { font-size: 15px; color: var(--body); line-height: 1.7; }
+.proj-body strong { color: var(--ink); }
+.proj-numbers {
+  margin-top: 18px;
+  display: flex; gap: 28px; flex-wrap: wrap;
+  padding-top: 18px; border-top: 1px solid var(--rule);
+}
+.proj-num {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--accent);
+  letter-spacing: -0.015em;
+}
+.proj-num small { display: block; font-family: 'Inter', sans-serif; font-size: 11px; color: var(--muted); font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; margin-top: 2px; }
+
+/* ── Leadership ── */
+.lead-list { display: flex; flex-direction: column; }
+.lead-item {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 48px;
+  padding: 32px 0;
+  border-top: 1px solid var(--rule);
+}
+.lead-item:first-child { border-top: 1px solid var(--ink); }
+.lead-item:last-child { border-bottom: 1px solid var(--rule); }
+.lead-date { font-family: 'Fraunces', Georgia, serif; font-size: 14px; font-weight: 500; color: var(--ink-soft); }
+.lead-date small { display: block; font-size: 12px; color: var(--muted); font-family: 'Inter', sans-serif; margin-top: 4px; font-weight: 400; }
+.lead-h { font-family: 'Fraunces', Georgia, serif; font-size: 24px; font-weight: 700; color: var(--ink); margin-bottom: 6px; letter-spacing: -0.015em; }
+.lead-sub { font-size: 13px; color: var(--accent); font-weight: 500; margin-bottom: 14px; }
+.lead-body { font-size: 15px; color: var(--body); line-height: 1.7; max-width: 60ch; }
+.lead-body strong { color: var(--ink); }
+
+/* ── Kudos (Testimonials) ── */
+.kudos-intro { max-width: 56ch; }
+.kudos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px 72px;
+  margin-top: 56px;
+}
+.kudos-item { position: relative; }
+.kudos-quote {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 16px;
+  font-variation-settings: 'opsz' 24;
+  letter-spacing: -0.005em;
+}
+.kudos-quote::before {
+  content: '\201C';
+  font-size: 1.4em;
+  line-height: 0;
+  color: var(--accent);
+  margin-right: 2px;
+  vertical-align: -0.3em;
+}
+.kudos-quote::after {
+  content: '\201D';
+  color: var(--accent);
+  margin-left: 1px;
+}
+.kudos-quote strong { font-style: normal; font-weight: 700; color: var(--ink); }
+.kudos-attr {
+  font-size: 13px;
+  color: var(--ink);
+  font-weight: 600;
+  font-style: normal;
+  padding-top: 12px;
+  border-top: 1px solid var(--rule);
+}
+.kudos-attr-role { color: var(--muted); font-weight: 400; }
+.kudos-context {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+  letter-spacing: 0.01em;
+  font-weight: 400;
 }
 
-/* ── Contact ── */
-.contact-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-.contact-card {
-  background: var(--card-bg); border: 1px solid var(--border);
-  border-radius: 14px; padding: 24px 20px; text-align: center;
-  transition: box-shadow 0.2s, transform 0.2s;
-  position: relative; overflow: hidden;
+/* ── Connect / Book ── */
+.book-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin: 56px 0 56px;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--rule);
 }
-.contact-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--grad); }
-.contact-card:hover { box-shadow: 0 8px 32px rgba(26,86,219,0.1); transform: translateY(-2px); }
-.c-icon { font-size: 24px; margin-bottom: 10px; }
-.c-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px; font-weight: 600; }
-.c-val { font-size: 13px; color: var(--blue); text-decoration: none; font-weight: 500; word-break: break-all; display: block; }
-.c-val:hover { text-decoration: underline; }
-.copy-btn {
-  margin-top: 10px; background: var(--blue-light); color: var(--blue);
-  border: 1px solid #c7d7f9; border-radius: 7px;
-  font-size: 11px; font-weight: 500; cursor: pointer;
-  padding: 5px 14px; transition: background 0.2s, color 0.2s;
-}
-.copy-btn:hover { background: var(--blue); color: white; }
-.copy-btn.copied { background: #dcfce7; color: #166534; border-color: #bbf7d0; }
-
-/* ── Leadership / Extra ── */
-.leadership-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-.lead-card {
-  background: var(--card-bg); border: 1px solid var(--border);
-  border-radius: 14px; padding: 20px;
-  transition: box-shadow 0.2s, transform 0.2s;
-  position: relative; overflow: hidden;
-}
-.lead-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--grad); }
-.lead-card:hover { box-shadow: 0 8px 32px rgba(26,86,219,0.1); transform: translateY(-2px); }
-.lead-icon { font-size: 28px; margin-bottom: 10px; }
-.lead-title { font-size: 14px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
-.lead-sub { font-size: 11.5px; color: var(--blue); font-weight: 500; margin-bottom: 10px; }
-.lead-body { font-size: 12.5px; color: var(--mid); line-height: 1.6; }
-
-/* ── Book a Call ── */
-.book-intro { font-size: 15px; color: var(--mid); line-height: 1.75; max-width: 560px; margin-bottom: 36px; }
-.book-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .book-card {
-  background: var(--card-bg); border: 1px solid var(--border);
-  border-radius: 16px; padding: 28px 24px;
-  transition: box-shadow 0.3s, transform 0.3s;
-  display: flex; flex-direction: column; gap: 0;
-  position: relative; overflow: hidden;
+  padding: 36px 28px;
+  border-right: 1px solid var(--rule);
+  display: flex; flex-direction: column;
+  text-decoration: none; color: inherit;
+  transition: background 0.2s;
+  background: transparent;
 }
-.book-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--grad); }
-.book-card:hover { box-shadow: 0 12px 40px rgba(26,86,219,0.14); transform: translateY(-4px); }
-.book-icon { font-size: 30px; margin-bottom: 12px; }
-.book-title { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
-.book-desc { font-size: 13px; color: var(--muted); line-height: 1.6; flex: 1; margin-bottom: 22px; }
-.book-duration {
-  display: inline-flex; align-items: center; gap: 5px;
-  font-size: 11px; font-weight: 600; color: var(--blue);
-  background: var(--blue-light); padding: 4px 10px; border-radius: 6px;
-  margin-bottom: 18px; width: fit-content;
+.book-card:last-child { border-right: none; }
+.book-card:hover { background: var(--accent-soft); }
+.book-card:hover .book-arrow { transform: translateX(6px); color: var(--accent); }
+.book-time {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 16px;
 }
-.book-btn {
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-  background: var(--grad); color: white;
-  border: none; border-radius: 10px; padding: 12px 20px;
-  font-size: 13.5px; font-weight: 600; cursor: pointer;
-  text-decoration: none; transition: opacity 0.2s, transform 0.2s;
-  box-shadow: 0 4px 16px rgba(26,86,219,0.3);
+.book-h {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 24px; font-weight: 700;
+  color: var(--ink); line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin-bottom: 12px;
 }
-.book-btn:hover { opacity: 0.9; transform: translateY(-1px); }
-.book-btn-arrow { font-size: 16px; transition: transform 0.2s; }
-.book-btn:hover .book-btn-arrow { transform: translateX(3px); }
+.book-d {
+  font-size: 14px; color: var(--body); line-height: 1.6;
+  flex: 1; margin-bottom: 28px;
+}
+.book-cta {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 600;
+  color: var(--ink); letter-spacing: 0.005em;
+}
+.book-arrow { transition: transform 0.2s, color 0.2s; display: inline-block; }
 
-/* ── Accolades / Testimonials ── */
-.accolades-intro { font-size: 14.5px; color: var(--mid); line-height: 1.75; max-width: 640px; margin-bottom: 32px; }
-.accolades-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.accolade-card {
-  background: var(--card-bg); border: 1px solid var(--border);
-  border-radius: 14px; padding: 22px 20px 18px;
-  transition: box-shadow 0.3s, transform 0.3s;
-  position: relative; overflow: hidden;
+.contact-strip {
+  display: flex; align-items: baseline; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px 32px;
+  padding-top: 28px; border-top: 1px solid var(--rule);
+  margin-top: 32px;
 }
-.accolade-card::before {
-  content: '\201C'; position: absolute; top: -10px; left: 14px;
-  font-size: 90px; font-family: 'Playfair Display', serif;
-  color: var(--blue); opacity: 0.08; line-height: 1; pointer-events: none;
+.contact-strip-label {
+  font-size: 12px; font-weight: 600;
+  color: var(--muted); letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
-.accolade-card:hover { box-shadow: 0 10px 36px rgba(26,86,219,0.13); transform: translateY(-3px); }
-.accolade-quote {
-  font-size: 13.5px; color: var(--mid); line-height: 1.75;
-  font-style: italic; position: relative; z-index: 1;
+.contact-strip-list {
+  display: flex; gap: 28px; flex-wrap: wrap;
+  list-style: none;
 }
-.accolade-context {
-  font-size: 10.5px; color: var(--blue); margin-top: 12px;
-  background: var(--blue-light); border-radius: 6px; padding: 4px 10px;
-  display: inline-block; font-weight: 500; font-style: normal;
+.contact-strip-list a {
+  font-size: 14px; color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+  transition: border-color 0.15s, color 0.15s;
 }
-.accolade-author { margin-top: 14px; display: flex; align-items: center; gap: 10px; }
-.accolade-avatar {
-  width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0;
-  background: var(--grad); display: flex; align-items: center; justify-content: center;
-  color: white; font-weight: 700; font-size: 13px; letter-spacing: -0.5px;
-}
-.accolade-info { flex: 1; }
-.accolade-name { font-size: 13px; font-weight: 600; color: var(--dark); }
-.accolade-role { font-size: 11px; color: var(--muted); margin-top: 2px; }
-.accolade-stars { color: #f59e0b; font-size: 10px; letter-spacing: 1px; }
-.accolade-slack { font-size: 10px; color: var(--muted); display: flex; align-items: center; gap: 3px; margin-top: 2px; }
+.contact-strip-list a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
 /* ── Footer ── */
 footer {
-  text-align: center; padding: 2.5rem 2rem 2rem;
-  border-top: 1px solid var(--border);
-  background: var(--footer-bg);
+  padding: 72px 32px 56px;
+  border-top: 1px solid var(--rule);
+  background: var(--bg);
 }
-.footer-social { display: flex; justify-content: center; gap: 16px; margin-bottom: 16px; flex-wrap: wrap; }
-.footer-social a {
-  color: #94a3b8; text-decoration: none; font-size: 12.5px;
-  font-weight: 500; transition: color 0.2s;
-  display: flex; align-items: center; gap: 5px;
+.footer-inner {
+  max-width: 1080px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 16px 32px; align-items: end;
 }
-.footer-social a:hover { color: #60a5fa; }
-.footer-text { font-size: 12px; color: var(--footer-text); line-height: 1.7; }
-.footer-text span { color: #3b82f6; }
-
-/* ── Animations ── */
-.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
-.reveal.visible { opacity: 1; transform: none; }
-.reveal-left { opacity: 0; transform: translateX(-28px); transition: opacity 0.65s ease, transform 0.65s ease; }
-.reveal-left.visible { opacity: 1; transform: none; }
-@keyframes fadeDown { from{opacity:0;transform:translateY(-16px)} to{opacity:1;transform:none} }
-@keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:none} }
+.footer-left p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+.footer-left .colophon { color: var(--body); margin-bottom: 6px; }
+.footer-left .colophon strong { color: var(--ink); font-weight: 600; }
+.footer-sig {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-size: 28px;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
 
 /* ── Responsive ── */
-@media(max-width:700px) {
-  .hero-name { font-size: 32px; }
-  .about-grid, .skill-groups, .cert-grid, .edu-grid, .proj-grid,
-  .contact-row, .leadership-grid, .accolades-grid, .book-grid { grid-template-columns: 1fr; }
-  nav { padding: 0 1rem; }
+@media (max-width: 880px) {
   .nav-links { display: none; }
-  .hamburger { display: flex; }
-  .wrap { padding: 3rem 1.25rem; }
-  .hero { padding: 3.5rem 1.25rem 4rem; }
+  .theme-toggle { display: none; }
+  .hamburger { display: block; }
+  .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+  .hero-portrait { max-width: 320px; }
+  .work-item, .edu-item, .lead-item { grid-template-columns: 1fr; gap: 14px; }
+  .work-co, .edu-school, .lead-h { font-size: 24px; }
+  .toolkit-grid { grid-template-columns: 1fr; gap: 40px; }
+  .certs-grid { grid-template-columns: 1fr; }
+  .proj-grid { grid-template-columns: 1fr; gap: 40px; }
+  .kudos-grid { grid-template-columns: 1fr; gap: 40px; }
+  .book-cards { grid-template-columns: 1fr; }
+  .book-card { border-right: none; border-bottom: 1px solid var(--rule); }
+  .book-card:last-child { border-bottom: none; }
+  .section { padding: 64px 0; }
+  .footer-inner { grid-template-columns: 1fr; }
+  .wrap, .wrap-narrow { padding: 0 24px; }
+  .nav-inner { padding: 16px 24px; }
 }
 </style>
 </head>
 <body>
 
-<div id="progress-bar"></div>
-<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</button>
-
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobile-menu">
-  <a href="#about" onclick="closeMobileMenu()">About</a>
-  <a href="#experience" onclick="closeMobileMenu()">Experience</a>
-  <a href="#skills" onclick="closeMobileMenu()">Skills</a>
-  <a href="#certifications" onclick="closeMobileMenu()">Certs</a>
-  <a href="#education" onclick="closeMobileMenu()">Education</a>
-  <a href="#projects" onclick="closeMobileMenu()">Projects</a>
-  <a href="#leadership" onclick="closeMobileMenu()">More</a>
-  <a href="#accolades" onclick="closeMobileMenu()">Kudos</a>
-  <a href="#book" onclick="closeMobileMenu()">Book a Call</a>
-  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
-</div>
-
-<!-- NAV -->
-<nav id="main-nav">
-  <a class="nav-brand" href="#">
-    <span class="nav-dot"></span>
-    Mahesh Gidwani
-  </a>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#certifications">Certs</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#leadership">More</a></li>
-    <li><a href="#accolades">Kudos</a></li>
-    <li><a href="#book">Book a Call</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <button class="theme-toggle" id="theme-toggle" title="Toggle dark mode">🌙</button>
-  <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#">Mahesh Gidwani<span class="brand-dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#kudos">Kudos</a></li>
+      <li><a href="#book">Book a call</a></li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle">Dark</button>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-bg-grid"></div>
-  <div class="hero-photo-wrap">
-    <img src="profile.jpg" alt="Mahesh Gidwani" />
-  </div>
-  <div class="hero-pill">
-    <span class="pill-dot"></span>
-    PMP® Certified · Open to Full-Time · May 2026 · Chicago, IL
-  </div>
-  <div class="hero-name">Mahesh Gidwani, PMP®</div>
-  <div class="hero-sub">
-    <span>ERP Consultant &amp; Technical Program Manager</span> — 4+ years shipping Oracle EBS &amp; SAP S/4HANA programs across Procurement, Finance &amp; Supply Chain.
-    Amazon Robotics · Wipro · Purdue MEM · $1.7M saved.
-  </div>
-  <div class="stats-row">
-    <div class="stat-pill">
-      <div class="stat-val" data-target="1.7" data-prefix="$" data-suffix="M">$1.7M</div>
-      <div class="stat-lbl">Annual savings<br>via EBS automation</div>
-    </div>
-    <div class="stat-pill">
-      <div class="stat-val" data-target="1" data-prefix="$" data-suffix="M+">$1M+</div>
-      <div class="stat-lbl">Cost misallocations<br>diagnosed &amp; resolved</div>
-    </div>
-    <div class="stat-pill">
-      <div class="stat-val">15→2</div>
-      <div class="stat-lbl">PO approval cycle<br>days reduced</div>
-    </div>
-    <div class="stat-pill">
-      <div class="stat-val" data-target="60" data-suffix="%">60%</div>
-      <div class="stat-lbl">Vendor escalation<br>reduction</div>
-    </div>
-    <div class="stat-pill">
-      <div class="stat-val" data-target="300" data-suffix="+">300+</div>
-      <div class="stat-lbl">Monthly transactions<br>governed</div>
-    </div>
-  </div>
-  <div class="hero-btns">
-    <a class="btn-p" href="mailto:mgidwani@purdue.edu">✉ Get in Touch</a>
-    <a class="btn-s" href="https://linkedin.com/in/maheshgidwanii" target="_blank">↗ LinkedIn Profile</a>
-    <a class="btn-resume" href="resume.pdf" download>⬇ Download Resume</a>
-  </div>
-  <div class="available-badge">
-    <span class="pill-dot"></span>
-    Available for full-time roles starting May 2026
-  </div>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#work" onclick="closeMenu()">Work</a>
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#kudos" onclick="closeMenu()">Kudos</a>
+  <a href="#book" onclick="closeMenu()">Book a call</a>
 </div>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="wrap">
-    <div class="sec-eyebrow">About Me</div>
-    <div class="sec-head">Hello, I'm <em>Mahesh</em></div>
-    <div class="about-grid reveal">
-      <div>
-        <div class="about-photo-wrap">
-          <img src="profile.jpg" alt="Mahesh Gidwani" />
-        </div>
+<!-- ─────────── HERO ─────────── -->
+<header class="hero wrap">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="kicker">ERP Consultant · Technical Program Manager</p>
+      <h1 class="display hero-display-name">Mahesh Gidwani<span class="period">.</span></h1>
+      <p class="lede hero-lede">Helping enterprise companies ship Oracle and SAP transformations that actually move the numbers.</p>
+      <div class="hero-actions">
+        <a href="#book" class="btn-primary">Book a 15-min call</a>
+        <a href="resume.pdf" class="link-subtle" download>or download my résumé</a>
       </div>
-      <div>
-        <div class="bio-text">
-          <p>In a world where ERP implementations fail at staggering rates, I bridge the gap between business requirements and technical execution — so transformations actually <em>ship</em>, and the numbers move.</p>
-          <p>At <strong>Amazon Robotics</strong>, I led the STP procurement track of a full Oracle EBS → SAP S/4HANA migration, architected a SBOM cost-validation engine with recursive BOM logic 16 levels deep, and built production-scale PL/SQL tooling that generated <strong>$1.7M in annual savings</strong> — all while governing 300+ monthly transactions across Finance, Engineering, and Procurement.</p>
-          <p>Before that, at <strong>Wipro Technologies</strong>, I delivered Oracle EBS transformations for GUVNL (a state electricity utility) — implementing AME approval hierarchies, automating three-way match exception detection across 200+ monthly invoices, and building APEX payment dashboards that recovered <strong>$0.8M in early-payment discounts</strong>.</p>
-          <p>I hold a <strong>PMP®</strong>, three SAP certifications (S/4HANA, ABAP, Ariba), and I'm completing my <strong>Master of Engineering Management at Purdue (GPA 3.7, May 2026)</strong>. Outside of work: cricket, strategy games, and anything that requires thinking three moves ahead.</p>
-        </div>
-        <div class="value-chips">
-          <span class="vchip"><span class="dot"></span>PMP® Certified</span>
-          <span class="vchip"><span class="dot"></span>3× SAP Certified</span>
-          <span class="vchip"><span class="dot"></span>Oracle EBS Expert</span>
-          <span class="vchip"><span class="dot"></span>Purdue MEM 2026</span>
-          <span class="vchip"><span class="dot"></span>Chicago, IL</span>
-        </div>
-        <div class="looking-box" style="margin-top:18px;">
-          <strong>Currently seeking:</strong> ERP Consultant (SAP/Oracle), Technical Program Manager, or Product Manager roles. Preference for enterprise transformation at EY, Deloitte, PwC, Accenture, Amazon, or Microsoft. Open to high-growth tech.
-        </div>
-      </div>
+      <p class="hero-meta">
+        Currently wrapping up a year at <strong>Amazon Robotics</strong> · Finishing my <strong>MEM at Purdue</strong> (May 2026) · Open to senior consulting &amp; TPM roles · Chicago, IL
+      </p>
+    </div>
+    <figure class="hero-portrait">
+      <img src="profile.jpg" alt="Mahesh Gidwani">
+      <figcaption>Seattle waterfront, autumn 2025</figcaption>
+    </figure>
+  </div>
+</header>
+
+<!-- ─────────── ABOUT ─────────── -->
+<section id="about" class="section bg-paper">
+  <div class="wrap-narrow">
+    <p class="kicker">About</p>
+    <h2 class="h1">A consultant who can code, and a coder who can present to a VP.</h2>
+    <div class="prose">
+      <p class="drop">Most ERP transformations fail. Not because the technology is broken — because the people running them can't speak both languages at once. I sit in the middle. I can read a PL/SQL package at 2am and present to a VP at 9am, and that dual-fluency is the whole point.</p>
+      <p>At <strong>Amazon Robotics</strong>, I led the procurement track of a full Oracle EBS to SAP S/4HANA migration. I architected a recursive SBOM cost-validation engine 16 levels deep, shipped an OAF + APEX dashboard that cut PO approval cycle from 15–20 days down to 1–2, and wrote a bulk-update automation that saved <strong>$1.7M annually</strong>. I also got Phil Conlon to call my work &ldquo;freakin awesome&rdquo; — which I'm choosing to count as a KPI.</p>
+      <p>Before Amazon, at <strong>Wipro</strong>, I implemented Oracle EBS for GUVNL (a state electricity utility), closed a CVC audit finding that had been open for over two years, and built an APEX payment-aging dashboard that recovered <strong>$0.8M in early-payment discounts</strong>. Before that, business analyst work at <strong>HP</strong> and a supply-chain internship at <strong>Tata Motors</strong> covering 13,000+ parts.</p>
+      <p>I'm finishing my Master of Engineering Management at <strong>Purdue</strong> (GPA 3.7, May 2026). PMP-certified, three SAP certifications, one Oracle. Outside work — I deadlift 400+, watch cricket whenever India plays, and have re-read <em>Working Backwards</em> three times now.</p>
+    </div>
+    <div class="currently">
+      <p><span class="currently-label">Currently</span>Wrapping up at Amazon Robotics. Finishing MEM at Purdue. Reading Decoded by Mai Jia. Open to senior consulting, ERP, and TPM roles starting May 2026.</p>
     </div>
   </div>
 </section>
 
-<div class="section-divider"></div>
-
-<!-- EXPERIENCE -->
-<section id="experience" class="alt">
+<!-- ─────────── WORK ─────────── -->
+<section id="work" class="section">
   <div class="wrap">
-    <div class="sec-eyebrow">Work Experience</div>
-    <div class="sec-head">Where I've <em>worked</em></div>
-    <div class="timeline">
+    <div class="section-head">
+      <p class="kicker">Selected work · 2021 – 2025</p>
+      <h2 class="h1">Where I've shipped.</h2>
+    </div>
+    <div class="work-list">
 
-      <!-- Amazon Robotics -->
-      <div class="tl-item reveal">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <div class="tl-top">
-            <div class="tl-co">Amazon Robotics</div>
-            <div class="tl-date">Jan 2025 – Dec 2025</div>
-          </div>
-          <div class="tl-role">Technical Program Manager Co-op · ERP Digital Transformation</div>
-          <div class="tl-location">📍 North Andover, MA (Austin, TX team)</div>
-          <div class="tl-impact-row">
-            <span class="impact-chip">$1.7M Annual Savings</span>
-            <span class="impact-chip">$1M+ Misallocation Diagnosed</span>
-            <span class="impact-chip">300+ Txns/Month Governed</span>
-            <span class="impact-chip">15–20 Days → 1–2 Days PO Cycle</span>
-          </div>
-          <ul class="tl-list">
-            <li><strong>Architected SBOM cost-validation engine</strong> using a waterfall pricing model (Future Quotes → Open PO Avg → Std Cost) with 4 custom PL/SQL functions and recursive BOM logic up to 16 levels deep — replaced manual CAR spreadsheet reconciliation for 300+ monthly transactions, validated across 3 UAT rounds with SPI TPMs, GCMs, and Finance SMEs.</li>
-            <li><strong>Designed and shipped an OAF + APEX supply-demand dashboard</strong> giving buyers real-time PO visibility before submission — replaced Tableau CAR audit reports as single source of truth, slashing PO approval cycle from <strong>15–20 days → 1–2 days</strong> and eliminating recurring L8 Finance escalations from a Sev2 incident.</li>
+      <article class="work-item">
+        <div class="work-meta">
+          <p class="work-date">Jan — Dec 2025</p>
+          <p class="work-loc">North Andover, MA</p>
+        </div>
+        <div class="work-body">
+          <h3 class="work-co">Amazon Robotics</h3>
+          <p class="work-role">Technical Program Manager Co-op · ERP Digital Transformation</p>
+          <p class="work-headline"><strong>$1.7M annual savings.</strong> <strong>$1M+ in misallocated landed cost</strong> traced and proposed fixes for. <strong>PO approval cycle reduced from 15–20 days to 1–2</strong>. Governed 300+ monthly transactions across Finance, Engineering, and Procurement.</p>
+          <ul class="work-bullets">
+            <li><strong>Architected an SBOM cost-validation engine</strong> using a waterfall pricing model (Future Quotes → Open PO Avg → Std Cost) with four PL/SQL functions and recursive BOM logic 16 levels deep — replaced manual CAR spreadsheet reconciliation for 300+ monthly transactions; validated across three UAT rounds with SPI TPMs, GCMs, and Finance SMEs.</li>
+            <li><strong>Designed and shipped an OAF + APEX supply-demand dashboard</strong> giving buyers real-time PO visibility before submission — replaced Tableau CAR audit reports as the single source of truth, eliminated recurring L8 Finance escalations from a Sev2 incident.</li>
             <li><strong>Saved $1.7M annually</strong> by tracing 400+ daily SO line edits to a missing bulk-update capability, writing the spec, and shipping an automated concurrent program with WebADI flat-file upload in under four weeks.</li>
-            <li><strong>Diagnosed $1M+ in FY22 landed cost misallocations</strong> by interviewing Accounting, RTS, and Logistics stakeholders to trace missing Incoterm data flagged by FORI auditors. Authored a two-option remediation proposal covering 80% of supplier use cases, projected to eliminate <strong>250–500 hrs of annual close work</strong>.</li>
-            <li><strong>Governed Oracle EBS → SAP S/4HANA transformation</strong> by resolving system-of-record boundaries across 6+ platforms (Coupa, Ariba, BTP, MDG, Kinaxis) — authored HLD, LLD, and SOP documentation; drove sign-off at QTS technical forums with 15+ reviewers. Adopted as the SI's functional specification baseline across 8 integrated workstreams.</li>
-            <li><strong>Earned 3 SAP certifications</strong> (S/4HANA Sourcing &amp; Procurement, ABAP Cloud, Ariba) to support transformation readiness; built a Quip onboarding guide covering Fiori workflows, PO processes, and MRP strategies — adopted by BASE engineers and new interns ahead of go-live.</li>
-            <li><strong>Evaluated GenAI and agentic AI architectures</strong> at DevCon 2025 across 3 enterprise use cases — multi-agent ticket triage, LLM-enriched data processing, and Bedrock vs. OpenAI stack tradeoffs for Oracle-SAP environments. Produced internal enablement documentation adopted by BASE engineering.</li>
-            <li><strong>Tracked product roadmap and sprint ceremonies</strong> across 15+ workstreams in Jira and Confluence; published KPI dashboards for senior leadership quarterly reviews; maintained cross-functional alignment across Finance, Engineering, and Procurement.</li>
+            <li><strong>Diagnosed $1M+ in FY22 landed cost misallocations</strong> by interviewing Accounting, RTS, and Logistics stakeholders to trace missing Incoterm data flagged by FORI auditors. Authored a two-option remediation proposal covering 80% of supplier use cases; projected to eliminate 250–500 hours of annual close work.</li>
+            <li><strong>Governed the Oracle EBS → SAP S/4HANA transformation</strong> by resolving system-of-record boundaries across six platforms (Coupa, Ariba, BTP, MDG, Kinaxis). Authored HLD, LLD, and SOP documentation; drove sign-off at QTS technical forums with 15+ reviewers. Adopted as the SI's functional specification baseline across eight integrated workstreams.</li>
+            <li><strong>Earned three SAP certifications</strong> (S/4HANA Sourcing &amp; Procurement, ABAP Cloud, Ariba) to support transformation readiness; built a Quip onboarding guide adopted by BASE engineers and new interns ahead of go-live.</li>
+            <li><strong>Evaluated GenAI and agentic AI architectures</strong> at DevCon 2025 across three enterprise use cases — multi-agent ticket triage, LLM-enriched data processing, and Bedrock vs. OpenAI tradeoffs for Oracle-SAP environments. Produced internal enablement documentation adopted by BASE engineering.</li>
           </ul>
         </div>
-      </div>
+      </article>
 
-      <!-- Wipro -->
-      <div class="tl-item reveal">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <div class="tl-top">
-            <div class="tl-co">Wipro Technologies</div>
-            <div class="tl-date">Apr 2022 – Jun 2024</div>
-          </div>
-          <div class="tl-role">Sr. Technical Consultant, Oracle EBS</div>
-          <div class="tl-location">📍 Bangalore, Karnataka, India</div>
-          <div class="tl-impact-row">
-            <span class="impact-chip">8 Days → 3 Days Approval Cycle</span>
-            <span class="impact-chip">60% Escalation Reduction</span>
-            <span class="impact-chip">$0.8M Discounts Recovered</span>
-            <span class="impact-chip">2-Yr Audit Finding Closed</span>
-          </div>
-          <ul class="tl-list">
-            <li><strong>Implemented Oracle AME approval hierarchy</strong> for GUVNL's (state electricity utility) PO workflow across 6 CVC-mandated authority levels — gathered requirements, designed configuration, ran UAT — cut cycle from <strong>8 → 3 days</strong> and closed a recurring government audit finding that had been open for 2+ years.</li>
-            <li><strong>Automated three-way match exception detection</strong> for 200+ monthly AP invoices, routing mismatch alerts to buyers same-morning — eliminated a 4-day manual reconciliation process and cut invoice holds from 15–20 to <strong>under 5/month</strong>.</li>
-            <li><strong>Built Oracle APEX payment aging dashboard</strong> giving Finance real-time visibility into $1.8M in vendor obligations after discovering they were working off a monthly Excel pull — escalation calls dropped <strong>60%</strong> and the team recovered <strong>$0.8M in early-payment discounts</strong> that quarter.</li>
-            <li><strong>Deployed PL/SQL budget validation</strong> on Oracle EBS PR-to-PO screen to block non-compliant POs before issuance — quarterly budget correction errors dropped <strong>20–30%</strong>, establishing audit-ready compliance controls aligned to CVC standards.</li>
-            <li><strong>Implemented Oracle EBS across core modules</strong> (OM, INV, GL, AR, AP, PO, WMS) for enterprise clients — spearheaded data migration using SQL*Loader, UTL_FILE, and packaged APIs; improved data migration efficiency by <strong>30%</strong> with minimal downtime.</li>
-            <li><strong>Developed RICEW components</strong> (Reports, Interfaces, Conversions, Extensions, Workflows) using Oracle Forms, Reports 6i/10g, and XML/BI Publisher — improved system processing times by <strong>45%</strong> and reduced manual interventions significantly.</li>
+      <article class="work-item">
+        <div class="work-meta">
+          <p class="work-date">Apr 2022 — Jun 2024</p>
+          <p class="work-loc">Bangalore, India</p>
+        </div>
+        <div class="work-body">
+          <h3 class="work-co">Wipro Technologies</h3>
+          <p class="work-role">Senior Technical Consultant · Oracle EBS</p>
+          <p class="work-headline">Cut PO approval cycle from <strong>8 days to 3</strong>, dropped vendor escalations by <strong>60%</strong>, recovered <strong>$0.8M in early-payment discounts</strong>, and closed a government audit finding that had been open for two years.</p>
+          <ul class="work-bullets">
+            <li><strong>Implemented Oracle AME approval hierarchy</strong> for GUVNL's (state electricity utility) PO workflow across six CVC-mandated authority levels — gathered requirements, designed configuration, ran UAT. Cut cycle from 8 to 3 days and closed a recurring government audit finding that had been open for 2+ years.</li>
+            <li><strong>Automated three-way match exception detection</strong> for 200+ monthly AP invoices, routing mismatch alerts to buyers same-morning — eliminated a 4-day manual reconciliation process and cut invoice holds from 15–20 to under 5 per month.</li>
+            <li><strong>Built an Oracle APEX payment-aging dashboard</strong> giving Finance real-time visibility into $1.8M in vendor obligations after discovering they were working off a monthly Excel pull — escalation calls dropped 60% and the team recovered $0.8M in early-payment discounts that quarter.</li>
+            <li><strong>Deployed PL/SQL budget validation</strong> on the Oracle EBS PR-to-PO screen to block non-compliant POs before issuance — quarterly budget correction errors dropped 20–30%, establishing audit-ready compliance controls aligned to CVC standards.</li>
+            <li><strong>Implemented Oracle EBS across core modules</strong> (OM, INV, GL, AR, AP, PO, WMS) for enterprise clients; spearheaded data migration using SQL*Loader, UTL_FILE, and packaged APIs — improved data migration efficiency by 30% with minimal downtime.</li>
+            <li><strong>Developed RICEW components</strong> (Reports, Interfaces, Conversions, Extensions, Workflows) using Oracle Forms, Reports 6i/10g, and XML/BI Publisher — improved system processing times by 45% and reduced manual interventions significantly.</li>
           </ul>
         </div>
-      </div>
+      </article>
 
-      <!-- HP -->
-      <div class="tl-item reveal">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <div class="tl-top">
-            <div class="tl-co">Hewlett-Packard Inc.</div>
-            <div class="tl-date">Aug 2021 – Apr 2022</div>
-          </div>
-          <div class="tl-role">Business Analyst · Customer Support Solutions</div>
-          <div class="tl-location">📍 Bangalore, India</div>
-          <div class="tl-impact-row">
-            <span class="impact-chip">29% Response Time Reduction</span>
-            <span class="impact-chip">25% Manual Work Reduction</span>
-            <span class="impact-chip">78% FCR Improvement</span>
-          </div>
-          <ul class="tl-list">
-            <li><strong>Developed Power BI dashboards</strong> tracking material flow, SLA adherence, and inventory utilization for operations managers — cross-functional response time dropped <strong>29%</strong> through KPI reporting for senior stakeholders.</li>
-            <li><strong>Configured Microsoft Dynamics 365 (D365)</strong> approval flows and invoice processing workflows after mapping manual data-entry errors — reduced manual work by <strong>25%</strong> across AP operations.</li>
-            <li><strong>Automated feedback and asset management</strong> using MS Power Automate — boosted CSAT scores by <strong>15%</strong> and cut ticket escalations by <strong>17%</strong>.</li>
-            <li>Resolved 100+ customer queries, achieving <strong>78% improvement in first-contact resolution (FCR)</strong> and 92% increase in customer satisfaction using PRE and Predifix systems.</li>
+      <article class="work-item">
+        <div class="work-meta">
+          <p class="work-date">Aug 2021 — Apr 2022</p>
+          <p class="work-loc">Bangalore, India</p>
+        </div>
+        <div class="work-body">
+          <h3 class="work-co">Hewlett-Packard</h3>
+          <p class="work-role">Business Analyst · Customer Support Solutions</p>
+          <p class="work-headline">Cut response time <strong>29%</strong>, reduced manual work <strong>25%</strong>, and pushed first-contact resolution to <strong>78%</strong>.</p>
+          <ul class="work-bullets">
+            <li><strong>Developed Power BI dashboards</strong> tracking material flow, SLA adherence, and inventory utilization for operations managers — cross-functional response time dropped 29% through KPI reporting for senior stakeholders.</li>
+            <li><strong>Configured Microsoft Dynamics 365 (D365)</strong> approval flows and invoice processing workflows after mapping manual data-entry errors — reduced manual work by 25% across AP operations.</li>
+            <li><strong>Automated feedback and asset management</strong> using MS Power Automate — boosted CSAT scores by 15% and cut ticket escalations by 17%.</li>
+            <li>Resolved 100+ customer queries, achieving 78% improvement in first-contact resolution (FCR) and 92% increase in customer satisfaction using PRE and Predifix systems.</li>
           </ul>
         </div>
-      </div>
+      </article>
 
-      <!-- Tata Motors -->
-      <div class="tl-item reveal">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <div class="tl-top">
-            <div class="tl-co">Tata Motors</div>
-            <div class="tl-date">Feb 2021 – Apr 2021</div>
-          </div>
-          <div class="tl-role">Supply Chain Analyst Intern</div>
-          <div class="tl-location">📍 India</div>
-          <ul class="tl-list">
-            <li>Established standardized work instructions (SWIs) for supply chain operations — increased process efficiency by <strong>15%</strong>.</li>
-            <li>Defined Ex-works and logistics lead times for <strong>13,000+ parts</strong>, standardizing procurement processes through RFQs.</li>
+      <article class="work-item">
+        <div class="work-meta">
+          <p class="work-date">Feb — Apr 2021</p>
+          <p class="work-loc">India</p>
+        </div>
+        <div class="work-body">
+          <h3 class="work-co">Tata Motors</h3>
+          <p class="work-role">Supply Chain Analyst Intern</p>
+          <p class="work-headline">Standardized procurement processes for <strong>13,000+ parts</strong>; lifted process efficiency <strong>15%</strong>.</p>
+          <ul class="work-bullets">
+            <li>Established standardized work instructions (SWIs) for supply chain operations — increased process efficiency by 15%.</li>
+            <li>Defined Ex-works and logistics lead times for 13,000+ parts, standardizing procurement processes through RFQs.</li>
           </ul>
         </div>
-      </div>
+      </article>
 
     </div>
   </div>
 </section>
 
-<div class="section-divider"></div>
-
-<!-- SKILLS -->
-<section id="skills">
+<!-- ─────────── TOOLKIT ─────────── -->
+<section id="toolkit" class="section bg-paper">
   <div class="wrap">
-    <div class="sec-eyebrow">Skills</div>
-    <div class="sec-head">Technical <em>toolkit</em></div>
-    <div class="skill-groups">
-
-      <div class="skill-group-card reveal">
-        <div class="sg-title">ERP Platforms</div>
-        <div class="tags">
-          <span class="tag">SAP S/4HANA</span><span class="tag">SAP Ariba SCC</span>
-          <span class="tag">SAP BTP</span><span class="tag">Oracle EBS R12/11i</span>
-          <span class="tag">Oracle APEX</span><span class="tag">Oracle AME</span>
-          <span class="tag">Coupa</span><span class="tag">Kinaxis</span>
-          <span class="tag">MDG</span><span class="tag">MS Dynamics 365</span>
-        </div>
-        <div class="skill-bars">
-          <div class="skill-bar-row">
-            <div class="skill-bar-label"><span>Oracle EBS</span><span>93%</span></div>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="93"></div></div>
-          </div>
-          <div class="skill-bar-row">
-            <div class="skill-bar-label"><span>SAP S/4HANA</span><span>88%</span></div>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
-          </div>
-          <div class="skill-bar-row">
-            <div class="skill-bar-label"><span>Oracle APEX</span><span>85%</span></div>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill-group-card reveal">
-        <div class="sg-title">Programming &amp; Data</div>
-        <div class="tags">
-          <span class="tag">PL/SQL</span><span class="tag">Python</span><span class="tag">SQL</span>
-          <span class="tag">Power BI</span><span class="tag">MS Power Automate</span>
-          <span class="tag">WebADI</span><span class="tag">ABAP</span><span class="tag">OAF</span>
-          <span class="tag">Linux</span><span class="tag">Pandas</span>
-          <span class="tag">Scikit-learn</span><span class="tag">Excel VBA</span>
-        </div>
-        <div class="skill-bars">
-          <div class="skill-bar-row">
-            <div class="skill-bar-label"><span>PL/SQL</span><span>94%</span></div>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="94"></div></div>
-          </div>
-          <div class="skill-bar-row">
-            <div class="skill-bar-label"><span>Python</span><span>80%</span></div>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
-          </div>
-          <div class="skill-bar-row">
-            <div class="skill-bar-label"><span>Power BI</span><span>85%</span></div>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill-group-card reveal">
-        <div class="sg-title">Business Process</div>
-        <div class="tags">
-          <span class="tag">Procure-to-Pay (P2P)</span><span class="tag">Source-to-Pay (STP)</span>
-          <span class="tag">Order-to-Cash (O2C)</span><span class="tag">Financial Close</span>
-          <span class="tag">Supply Chain Optimization</span><span class="tag">Fit-Gap Analysis</span>
-          <span class="tag">As-Is / To-Be Design</span><span class="tag">UAT &amp; CRP</span>
-          <span class="tag">Finance Controls</span><span class="tag">HLD / LLD</span>
-        </div>
-        <div class="skill-bars">
-          <div class="skill-bar-row">
-            <div class="skill-bar-label"><span>P2P / STP</span><span>95%</span></div>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
-          </div>
-          <div class="skill-bar-row">
-            <div class="skill-bar-label"><span>Fit-Gap / HLD / LLD</span><span>90%</span></div>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill-group-card reveal">
-        <div class="sg-title">Program Management</div>
-        <div class="tags">
-          <span class="tag">Agile / Scrum</span><span class="tag">SDLC</span>
-          <span class="tag">Jira &amp; Confluence</span>
-          <span class="tag">Change Management</span><span class="tag">Stakeholder Management</span>
-          <span class="tag">Risk Mitigation</span><span class="tag">MS Project</span>
-          <span class="tag">Monte Carlo Simulation</span><span class="tag">Lean Six Sigma (DMAIC)</span>
-        </div>
-        <div class="skill-bars">
-          <div class="skill-bar-row">
-            <div class="skill-bar-label"><span>Agile / Scrum</span><span>88%</span></div>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
-          </div>
-          <div class="skill-bar-row">
-            <div class="skill-bar-label"><span>Stakeholder Mgmt</span><span>92%</span></div>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
-          </div>
-        </div>
-      </div>
-
+    <div class="section-head">
+      <p class="kicker">Tools of the trade</p>
+      <h2 class="h1">Toolkit &amp; credentials.</h2>
     </div>
-  </div>
-</section>
 
-<div class="section-divider"></div>
+    <div class="toolkit-grid">
+      <div class="toolkit-col">
+        <h3>ERP Platforms</h3>
+        <p class="toolkit-list">
+          <span>SAP S/4HANA</span><span>SAP Ariba SCC</span><span>SAP BTP</span><span>Oracle EBS R12/11i</span><span>Oracle APEX</span><span>Oracle AME</span><span>Coupa</span><span>Kinaxis</span><span>MDG</span><span>MS Dynamics 365</span>
+        </p>
+      </div>
+      <div class="toolkit-col">
+        <h3>Programming &amp; Data</h3>
+        <p class="toolkit-list">
+          <span>PL/SQL</span><span>Python</span><span>SQL</span><span>ABAP</span><span>OAF</span><span>WebADI</span><span>Power BI</span><span>Power Automate</span><span>Pandas</span><span>Scikit-learn</span><span>Excel VBA</span><span>Linux</span>
+        </p>
+      </div>
+      <div class="toolkit-col">
+        <h3>Business Process</h3>
+        <p class="toolkit-list">
+          <span>Procure-to-Pay (P2P)</span><span>Source-to-Pay (STP)</span><span>Order-to-Cash (O2C)</span><span>Financial Close</span><span>Supply Chain Optimization</span><span>Fit-Gap Analysis</span><span>As-Is / To-Be Design</span><span>UAT &amp; CRP</span><span>Finance Controls</span><span>HLD / LLD</span>
+        </p>
+      </div>
+      <div class="toolkit-col">
+        <h3>Program Management</h3>
+        <p class="toolkit-list">
+          <span>Agile / Scrum</span><span>SDLC</span><span>Jira &amp; Confluence</span><span>Change Management</span><span>Stakeholder Management</span><span>Risk Mitigation</span><span>MS Project</span><span>Monte Carlo Simulation</span><span>Lean Six Sigma (DMAIC)</span>
+        </p>
+      </div>
+    </div>
 
-<!-- CERTIFICATIONS -->
-<section id="certifications" class="alt">
-  <div class="wrap">
-    <div class="sec-eyebrow">Certifications</div>
-    <div class="sec-head">Credentials &amp; <em>Badges</em></div>
-    <div class="cert-grid">
-      <div class="cert-card reveal">
-        <span class="cert-badge">🏆</span>
-        <div class="cert-name">PMP® — Project Management Professional</div>
-        <div class="cert-org">Project Management Institute (PMI)</div>
-        <div class="cert-lnk">✓ Active</div>
-      </div>
-      <div class="cert-card reveal">
-        <span class="cert-badge">🔷</span>
-        <div class="cert-name">SAP Certified — S/4HANA Sourcing &amp; Procurement</div>
-        <div class="cert-org">SAP SE</div>
-        <a class="cert-lnk" href="https://www.credly.com/badges/234849d1-1bcd-4158-8422-450e4dbb9043/public_url" target="_blank">View on Credly →</a>
-      </div>
-      <div class="cert-card reveal">
-        <span class="cert-badge">💻</span>
-        <div class="cert-name">SAP Certified — ABAP Cloud Back-End Developer</div>
-        <div class="cert-org">SAP SE</div>
-        <a class="cert-lnk" href="https://www.credly.com/badges/f4f7e3d5-4228-4d2c-940b-f3156b245260/public_url" target="_blank">View on Credly →</a>
-      </div>
-      <div class="cert-card reveal">
-        <span class="cert-badge">🛒</span>
-        <div class="cert-name">SAP Certified — SAP Ariba SCC</div>
-        <div class="cert-org">SAP SE</div>
-        <a class="cert-lnk" href="https://www.credly.com/badges/dc22b266-f4ed-4bc5-9dad-1b0b67af6e73/public_url" target="_blank">View on Credly →</a>
-      </div>
-      <div class="cert-card reveal">
-        <span class="cert-badge">☁️</span>
-        <div class="cert-name">Microsoft Azure Fundamentals AZ-900</div>
-        <div class="cert-org">Microsoft</div>
-        <div class="cert-lnk">✓ Active</div>
-      </div>
-      <div class="cert-card reveal">
-        <span class="cert-badge">🗃️</span>
-        <div class="cert-name">Microsoft Azure Data Fundamentals DP-900</div>
-        <div class="cert-org">Microsoft</div>
-        <div class="cert-lnk">✓ Active</div>
-      </div>
-      <div class="cert-card reveal">
-        <span class="cert-badge">📊</span>
-        <div class="cert-name">Microsoft Power BI</div>
-        <div class="cert-org">Udemy</div>
-        <a class="cert-lnk" href="https://www.udemy.com/certificate/UC-051268d9-da2f-43ad-a3f6-a3f7f5605d26/" target="_blank">View Certificate →</a>
-      </div>
-      <div class="cert-card reveal">
-        <span class="cert-badge">🗄️</span>
-        <div class="cert-name">SQL / PL-SQL</div>
-        <div class="cert-org">Udemy</div>
-        <a class="cert-lnk" href="https://www.udemy.com/certificate/UC-4451808d-8434-41f5-9bb0-2142bac5e539/" target="_blank">View Certificate →</a>
-      </div>
-      <div class="cert-card reveal">
-        <span class="cert-badge">🐍</span>
-        <div class="cert-name">Python Programming</div>
-        <div class="cert-org">Udemy</div>
-        <a class="cert-lnk" href="https://www.udemy.com/certificate/UC-7d4c3100-1881-4fb6-b6eb-fdca95fd6372/" target="_blank">View Certificate →</a>
-      </div>
-      <div class="cert-card reveal">
-        <span class="cert-badge">🐧</span>
-        <div class="cert-name">Linux</div>
-        <div class="cert-org">Udemy</div>
-        <a class="cert-lnk" href="https://www.udemy.com/certificate/UC-8146dcf0-6c2b-4c00-aa73-6669cb9bff59/" target="_blank">View Certificate →</a>
-      </div>
-      <div class="cert-card reveal">
-        <span class="cert-badge">🎯</span>
-        <div class="cert-name">Six Sigma Yellow Belt</div>
-        <div class="cert-org">IASSC</div>
-        <div class="cert-lnk">✓ Active</div>
-      </div>
-      <div class="cert-card reveal">
-        <span class="cert-badge">🔧</span>
-        <div class="cert-name">Oracle Certified Associate</div>
-        <div class="cert-org">Oracle Corporation</div>
-        <div class="cert-lnk">✓ Active</div>
+    <div class="certs-block">
+      <h3>Certifications</h3>
+      <div class="certs-grid">
+        <div class="cert-row">
+          <div class="cert-name">PMP — Project Management Professional <small>Project Management Institute</small></div>
+          <div class="cert-action"><span>Active</span></div>
+        </div>
+        <div class="cert-row">
+          <div class="cert-name">SAP Certified — S/4HANA Sourcing &amp; Procurement <small>SAP SE</small></div>
+          <div class="cert-action"><a href="https://www.credly.com/badges/234849d1-1bcd-4158-8422-450e4dbb9043/public_url" target="_blank">View</a></div>
+        </div>
+        <div class="cert-row">
+          <div class="cert-name">SAP Certified — ABAP Cloud Back-End Developer <small>SAP SE</small></div>
+          <div class="cert-action"><a href="https://www.credly.com/badges/f4f7e3d5-4228-4d2c-940b-f3156b245260/public_url" target="_blank">View</a></div>
+        </div>
+        <div class="cert-row">
+          <div class="cert-name">SAP Certified — SAP Ariba SCC <small>SAP SE</small></div>
+          <div class="cert-action"><a href="https://www.credly.com/badges/dc22b266-f4ed-4bc5-9dad-1b0b67af6e73/public_url" target="_blank">View</a></div>
+        </div>
+        <div class="cert-row">
+          <div class="cert-name">Microsoft Azure Fundamentals (AZ-900) <small>Microsoft</small></div>
+          <div class="cert-action"><span>Active</span></div>
+        </div>
+        <div class="cert-row">
+          <div class="cert-name">Microsoft Azure Data Fundamentals (DP-900) <small>Microsoft</small></div>
+          <div class="cert-action"><span>Active</span></div>
+        </div>
+        <div class="cert-row">
+          <div class="cert-name">Oracle Certified Associate <small>Oracle Corporation</small></div>
+          <div class="cert-action"><span>Active</span></div>
+        </div>
+        <div class="cert-row">
+          <div class="cert-name">Six Sigma Yellow Belt <small>IASSC</small></div>
+          <div class="cert-action"><span>Active</span></div>
+        </div>
+        <div class="cert-row">
+          <div class="cert-name">Microsoft Power BI <small>Udemy</small></div>
+          <div class="cert-action"><a href="https://www.udemy.com/certificate/UC-051268d9-da2f-43ad-a3f6-a3f7f5605d26/" target="_blank">View</a></div>
+        </div>
+        <div class="cert-row">
+          <div class="cert-name">SQL / PL-SQL <small>Udemy</small></div>
+          <div class="cert-action"><a href="https://www.udemy.com/certificate/UC-4451808d-8434-41f5-9bb0-2142bac5e539/" target="_blank">View</a></div>
+        </div>
+        <div class="cert-row">
+          <div class="cert-name">Python Programming <small>Udemy</small></div>
+          <div class="cert-action"><a href="https://www.udemy.com/certificate/UC-7d4c3100-1881-4fb6-b6eb-fdca95fd6372/" target="_blank">View</a></div>
+        </div>
+        <div class="cert-row">
+          <div class="cert-name">Linux <small>Udemy</small></div>
+          <div class="cert-action"><a href="https://www.udemy.com/certificate/UC-8146dcf0-6c2b-4c00-aa73-6669cb9bff59/" target="_blank">View</a></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="section-divider"></div>
-
-<!-- EDUCATION -->
-<section id="education">
+<!-- ─────────── EDUCATION ─────────── -->
+<section id="education" class="section">
   <div class="wrap">
-    <div class="sec-eyebrow">Education</div>
-    <div class="sec-head">Academic <em>background</em></div>
-    <div class="edu-grid">
-      <div class="edu-card reveal">
-        <div class="edu-school">Purdue University</div>
-        <div class="edu-deg">Master of Science — Engineering Management (MEM)<br>Specialization: Industrial Engineering</div>
-        <div class="edu-gpa">GPA 3.7 / 4.0 · Expected May 2026</div>
-        <div class="edu-courses"><strong>Coursework:</strong> Entrepreneurship &amp; Business Strategy, Accounting, Supply Chain &amp; Operations Management, System Simulation, Project Management, Global Supply Chain Management, Marketing Management</div>
+    <div class="section-head">
+      <p class="kicker">Education</p>
+      <h2 class="h1">Where I learned.</h2>
+    </div>
+    <div class="edu-list">
+      <div class="edu-item">
+        <div class="edu-date">May 2026 <small>Expected</small></div>
+        <div>
+          <h3 class="edu-school">Purdue University</h3>
+          <p class="edu-deg">Master of Science, Engineering Management (MEM) · Specialization in Industrial Engineering</p>
+          <p class="edu-note"><strong>GPA 3.7 / 4.0.</strong> Coursework: Entrepreneurship &amp; Business Strategy, Accounting, Supply Chain &amp; Operations Management, System Simulation, Project Management, Global Supply Chain Management, Marketing Management.</p>
+        </div>
       </div>
-      <div class="edu-card reveal">
-        <div class="edu-school">Gujarat Technological University</div>
-        <div class="edu-deg">Bachelor of Engineering — Mechanical Engineering</div>
-        <div class="edu-gpa">GPA 9.19/10 (3.89/4.0) · Jun 2021</div>
-        <div class="edu-note">🥇 Ranked 1st in the Mechanical Engineering Department (2021)</div>
-        <div class="edu-courses" style="margin-top:8px;"><strong>Coursework:</strong> Industrial Engineering, Computer Aided Manufacturing, Operations Research, Business Communication &amp; Ethics</div>
+      <div class="edu-item">
+        <div class="edu-date">Jun 2021</div>
+        <div>
+          <h3 class="edu-school">Gujarat Technological University</h3>
+          <p class="edu-deg">Bachelor of Engineering, Mechanical Engineering</p>
+          <p class="edu-note"><strong>GPA 9.19 / 10 (3.89 / 4.0).</strong> Ranked 1st in the Mechanical Engineering Department, 2021. Coursework: Industrial Engineering, Computer Aided Manufacturing, Operations Research, Business Communication &amp; Ethics.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="section-divider"></div>
-
-<!-- PROJECTS -->
-<section id="projects" class="alt">
+<!-- ─────────── PROJECTS ─────────── -->
+<section id="projects" class="section bg-paper">
   <div class="wrap">
-    <div class="sec-eyebrow">Consulting Projects</div>
-    <div class="sec-head">Independent <em>work</em></div>
+    <div class="section-head">
+      <p class="kicker">Consulting Projects</p>
+      <h2 class="h1">Side work, on the record.</h2>
+    </div>
     <div class="proj-grid">
-      <div class="proj-card reveal">
-        <div class="proj-head">Sunspectra — Sunscreen Manufacturing Optimization</div>
-        <div class="proj-tag">Strategy Consultant · Jan 2026 – Present · West Lafayette, IN</div>
-        <div class="proj-body">Redesigned the bottle-filling production workflow by mapping current-state operations, identifying throughput bottlenecks via time-motion studies, and proposing an optimized layout with reduced WIP buffers.
-          <br><br>Applied Lean / DMAIC methodology; cross-referenced industry benchmarks to validate recommendations.</div>
-        <div class="proj-metrics">
-          <span class="proj-metric">+18% Throughput (projected)</span>
-          <span class="proj-metric">-25% Changeover Time</span>
+      <article class="proj-item">
+        <p class="proj-date">Jan 2026 — Present · West Lafayette, IN</p>
+        <h3 class="proj-h">Sunspectra — Sunscreen manufacturing optimization</h3>
+        <p class="proj-body">Redesigned the bottle-filling production workflow by mapping current-state operations, identifying throughput bottlenecks via time-motion studies, and proposing an optimized layout with reduced WIP buffers. Applied Lean / DMAIC methodology; cross-referenced industry benchmarks to validate recommendations.</p>
+        <div class="proj-numbers">
+          <div class="proj-num">+18%<small>Throughput (projected)</small></div>
+          <div class="proj-num">−25%<small>Changeover time</small></div>
         </div>
-      </div>
-      <div class="proj-card reveal">
-        <div class="proj-head">Top Value Fabrics (TVF) — Freight Cost Forecasting</div>
-        <div class="proj-tag">Strategy Consultant · Aug – Dec 2024 · Purdue ELI · Carmel, IN</div>
-        <div class="proj-body">Led a cross-functional team of 5 to build a <strong>Python-based ML model</strong> for freight cost forecasting, integrating historical data, fuel prices, and economic indicators. Improved forecasting accuracy by <strong>30%</strong>.
-          <br><br>Developed a threshold-based freight rate strategy using Monte Carlo simulation for risk-adjusted decision-making; reduced transportation costs by <strong>15%</strong>.</div>
-        <div class="proj-metrics">
-          <span class="proj-metric">$150K Savings vs. Spot</span>
-          <span class="proj-metric">30% Forecast Accuracy ↑</span>
-          <span class="proj-metric">15% Cost Reduction</span>
+      </article>
+      <article class="proj-item">
+        <p class="proj-date">Aug — Dec 2024 · Purdue ELI · Carmel, IN</p>
+        <h3 class="proj-h">Top Value Fabrics — Freight cost forecasting</h3>
+        <p class="proj-body">Led a cross-functional team of five to build a Python-based ML model for freight cost forecasting, integrating historical data, fuel prices, and economic indicators. Developed a threshold-based freight rate strategy using Monte Carlo simulation for risk-adjusted decision-making.</p>
+        <div class="proj-numbers">
+          <div class="proj-num">$150K<small>Savings vs. spot</small></div>
+          <div class="proj-num">+30%<small>Forecast accuracy</small></div>
+          <div class="proj-num">−15%<small>Cost reduction</small></div>
         </div>
-      </div>
+      </article>
     </div>
   </div>
 </section>
 
-<div class="section-divider"></div>
-
-<!-- LEADERSHIP & EXTRACURRICULAR -->
-<section id="leadership">
+<!-- ─────────── LEADERSHIP ─────────── -->
+<section id="leadership" class="section">
   <div class="wrap">
-    <div class="sec-eyebrow">Leadership &amp; Beyond</div>
-    <div class="sec-head">More about <em>Mahesh</em></div>
-    <div class="leadership-grid">
-      <div class="lead-card reveal">
-        <div class="lead-icon">📚</div>
-        <div class="lead-title">Urban Read Library</div>
-        <div class="lead-sub">Founder · Jan 2020 – Present · Gujarat, India</div>
-        <div class="lead-body">Built a tech-enabled collaborative study space attracting <strong>500+ students</strong> in year one. Developed and deployed a mobile app for real-time attendance, seat availability, and feedback tracking — improving space management efficiency by <strong>40%</strong>.</div>
+    <div class="section-head">
+      <p class="kicker">Outside the office</p>
+      <h2 class="h1">Other things worth knowing.</h2>
+    </div>
+    <div class="lead-list">
+      <div class="lead-item">
+        <div class="lead-date">Jan 2020 — Present <small>Gujarat, India</small></div>
+        <div>
+          <h3 class="lead-h">Urban Read Library</h3>
+          <p class="lead-sub">Founder</p>
+          <p class="lead-body">Built a tech-enabled collaborative study space attracting <strong>500+ students</strong> in year one. Developed and deployed a mobile app for real-time attendance, seat availability, and feedback tracking — improving space management efficiency by <strong>40%</strong>.</p>
+        </div>
       </div>
-      <div class="lead-card reveal">
-        <div class="lead-icon">🔬</div>
-        <div class="lead-title">Phase Change Heat Exchanger Design</div>
-        <div class="lead-sub">Design Lead · Nov 2020 – Feb 2022 · GTU</div>
-        <div class="lead-body">Led design and optimization of a shell-and-tube heat exchanger using Paraffin Wax as phase change material. Used <strong>ANSYS</strong> for modeling and validation. Achieved <strong>65% reduction in cooling time</strong> for ginger and cotton.</div>
+      <div class="lead-item">
+        <div class="lead-date">Nov 2020 — Feb 2022 <small>GTU</small></div>
+        <div>
+          <h3 class="lead-h">Phase Change Heat Exchanger Design</h3>
+          <p class="lead-sub">Design Lead</p>
+          <p class="lead-body">Led design and optimization of a shell-and-tube heat exchanger using paraffin wax as phase change material. Used <strong>ANSYS</strong> for modeling and validation. Achieved <strong>65% reduction in cooling time</strong> for ginger and cotton storage.</p>
+        </div>
       </div>
-      <div class="lead-card reveal">
-        <div class="lead-icon">🤖</div>
-        <div class="lead-title">AI/GenAI Enablement</div>
-        <div class="lead-sub">DevCon 2025 · Amazon Robotics</div>
-        <div class="lead-body">Evaluated GenAI and agentic AI architectures across 3 enterprise use cases — multi-agent ticket triage, LLM-enriched data pipelines, and Bedrock vs. OpenAI tradeoffs for Oracle-SAP environments. Produced enablement documentation adopted by BASE engineering.</div>
+      <div class="lead-item">
+        <div class="lead-date">2025 <small>Amazon DevCon</small></div>
+        <div>
+          <h3 class="lead-h">GenAI &amp; Agentic AI Enablement</h3>
+          <p class="lead-sub">DevCon 2025 — Amazon Robotics</p>
+          <p class="lead-body">Evaluated GenAI and agentic AI architectures across three enterprise use cases — multi-agent ticket triage, LLM-enriched data pipelines, and Bedrock vs. OpenAI tradeoffs for Oracle-SAP environments. Produced enablement documentation adopted by BASE engineering.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="section-divider"></div>
-
-<!-- ACCOLADES -->
-<section id="accolades" class="alt">
+<!-- ─────────── KUDOS ─────────── -->
+<section id="kudos" class="section bg-warm">
   <div class="wrap">
-    <div class="sec-eyebrow">Accolades</div>
-    <div class="sec-head">Kind words from <em>stakeholders</em></div>
-    <p class="accolades-intro">Real messages from teammates, managers, and stakeholders at Amazon Robotics — captured directly from Slack. Nothing builds a reputation like the people who worked alongside you.</p>
-    <div class="accolades-grid">
+    <div class="section-head">
+      <p class="kicker">Kind words</p>
+      <h2 class="h1">What my colleagues said.</h2>
+      <p class="lede-small kudos-intro">Real messages from teammates, managers, and stakeholders at Amazon Robotics — captured from Slack. Nothing builds a reputation like the people who actually worked alongside you.</p>
+    </div>
 
-      <!-- Usman Anwar -->
-      <div class="accolade-card reveal">
-        <div class="accolade-quote">"This is fantastic, Mahesh, will share with the team. I demo'd with the team today and got <strong>significant positive feedback</strong> on the value add of the process."</div>
-        <div class="accolade-context">🛠 Mass Update Utility · Nov 2024</div>
-        <div class="accolade-author">
-          <div class="accolade-avatar">UA</div>
-          <div class="accolade-info">
-            <div class="accolade-name">Usman Anwar</div>
-            <div class="accolade-role">UAT Lead · Amazon Robotics</div>
-            <div class="accolade-stars">★★★★★</div>
-          </div>
-        </div>
-      </div>
+    <div class="kudos-grid">
 
-      <!-- Phil Conlon via Wajid -->
-      <div class="accolade-card reveal">
-        <div class="accolade-quote">"That is <strong>freakin awesome</strong>!" <span style="font-size:12px; font-style:normal;">🔥🔥🔥</span><br><br><em style="font-size:12px; color:var(--muted); font-style:normal;">Shared by Wajid Mohammed Abdul: "@mgidwan — this is for you! Phil is super happy with the mass upload tool! :-)"</em></div>
-        <div class="accolade-context">📦 Mass Upload Tool · Nov 2024</div>
-        <div class="accolade-author">
-          <div class="accolade-avatar">PC</div>
-          <div class="accolade-info">
-            <div class="accolade-name">Phil Conlon</div>
-            <div class="accolade-role">Senior Stakeholder · Amazon Robotics</div>
-            <div class="accolade-stars">★★★★★</div>
-          </div>
-        </div>
-      </div>
+      <figure class="kudos-item">
+        <blockquote class="kudos-quote">This is fantastic, Mahesh. I demo'd with the team today and got <strong>significant positive feedback</strong> on the value add of the process.</blockquote>
+        <figcaption class="kudos-attr">
+          Usman Anwar <span class="kudos-attr-role">— UAT Lead, Amazon Robotics</span>
+          <span class="kudos-context">on the Mass Update Utility · Nov 2024</span>
+        </figcaption>
+      </figure>
 
-      <!-- Rajath AV -->
-      <div class="accolade-card reveal">
-        <div class="accolade-quote">"What an <strong>amazing presentation</strong>! You called out the impacts so well 🙏👏"</div>
-        <div class="accolade-context">🎤 Stakeholder Presentation · Jun 2025</div>
-        <div class="accolade-author">
-          <div class="accolade-avatar">RA</div>
-          <div class="accolade-info">
-            <div class="accolade-name">Rajath AV</div>
-            <div class="accolade-role">Team Lead · Amazon Robotics BASE</div>
-            <div class="accolade-stars">★★★★★</div>
-          </div>
-        </div>
-      </div>
+      <figure class="kudos-item">
+        <blockquote class="kudos-quote">That is <strong>freakin awesome</strong>! Phil is super happy with the mass upload tool.</blockquote>
+        <figcaption class="kudos-attr">
+          Phil Conlon <span class="kudos-attr-role">— Senior Stakeholder, Amazon Robotics</span>
+          <span class="kudos-context">shared by Wajid Mohammed Abdul · Nov 2024</span>
+        </figcaption>
+      </figure>
 
-      <!-- Pujan Kakkad -->
-      <div class="accolade-card reveal">
-        <div class="accolade-quote">"<strong>Fantastic presentation</strong> Mahesh! 😄🙌 Very well delivered — loved the structure and the clarity on impact numbers."</div>
-        <div class="accolade-context">🎤 Stakeholder Presentation · Jun 2025</div>
-        <div class="accolade-author">
-          <div class="accolade-avatar">PK</div>
-          <div class="accolade-info">
-            <div class="accolade-name">Pujan Kakkad</div>
-            <div class="accolade-role">Engineer · Amazon Robotics BASE</div>
-            <div class="accolade-stars">★★★★★</div>
-          </div>
-        </div>
-      </div>
+      <figure class="kudos-item">
+        <blockquote class="kudos-quote">What an <strong>amazing presentation</strong>. You called out the impacts so well.</blockquote>
+        <figcaption class="kudos-attr">
+          Rajath AV <span class="kudos-attr-role">— Team Lead, Amazon Robotics BASE</span>
+          <span class="kudos-context">stakeholder presentation · Jun 2025</span>
+        </figcaption>
+      </figure>
 
-      <!-- Anju Gutta -->
-      <div class="accolade-card reveal">
-        <div class="accolade-quote">"<strong>Great Job</strong> @mgidwan, you crossed 400lbs in presentation 👏😄 — you used a great catch phrase to get <strong>everybody's full attention</strong>."</div>
-        <div class="accolade-context">🎤 Stakeholder Presentation · Jun 2025</div>
-        <div class="accolade-author">
-          <div class="accolade-avatar">AG</div>
-          <div class="accolade-info">
-            <div class="accolade-name">Anju Gutta</div>
-            <div class="accolade-role">Engineer · Amazon Robotics BASE</div>
-            <div class="accolade-stars">★★★★★</div>
-          </div>
-        </div>
-      </div>
+      <figure class="kudos-item">
+        <blockquote class="kudos-quote"><strong>Fantastic presentation</strong>, Mahesh. Loved the structure and the clarity on impact numbers.</blockquote>
+        <figcaption class="kudos-attr">
+          Pujan Kakkad <span class="kudos-attr-role">— Engineer, Amazon Robotics BASE</span>
+          <span class="kudos-context">stakeholder presentation · Jun 2025</span>
+        </figcaption>
+      </figure>
 
-      <!-- Subburaj Gurusamy -->
-      <div class="accolade-card reveal">
-        <div class="accolade-quote">"<strong>Very well presented.</strong> 👏👍 You used a great catch phrase — '400 lbs deadlift' to get everybody's full attention. 😏"</div>
-        <div class="accolade-context">🎤 Stakeholder Presentation · Jun 2025</div>
-        <div class="accolade-author">
-          <div class="accolade-avatar">SG</div>
-          <div class="accolade-info">
-            <div class="accolade-name">Subburaj Gurusamy</div>
-            <div class="accolade-role">Senior Engineer · Amazon Robotics BASE</div>
-            <div class="accolade-stars">★★★★★</div>
-          </div>
-        </div>
-      </div>
+      <figure class="kudos-item">
+        <blockquote class="kudos-quote"><strong>Great job</strong>, Mahesh — you crossed 400lbs in presentation. A great catch phrase to get everybody's full attention.</blockquote>
+        <figcaption class="kudos-attr">
+          Anju Gutta <span class="kudos-attr-role">— Engineer, Amazon Robotics BASE</span>
+          <span class="kudos-context">stakeholder presentation · Jun 2025</span>
+        </figcaption>
+      </figure>
 
-      <!-- Khin Khine -->
-      <div class="accolade-card reveal">
-        <div class="accolade-quote">"Come back!! 😭 Hopefully the <strong>headcount gods are in your favor</strong> 😎 — it's been amazing having you on the team."</div>
-        <div class="accolade-context">👋 End of Co-op · Dec 2024</div>
-        <div class="accolade-author">
-          <div class="accolade-avatar">KK</div>
-          <div class="accolade-info">
-            <div class="accolade-name">Khin Khine</div>
-            <div class="accolade-role">Software Development Engineer · Amazon Robotics</div>
-            <div class="accolade-stars">★★★★★</div>
-          </div>
-        </div>
-      </div>
+      <figure class="kudos-item">
+        <blockquote class="kudos-quote"><strong>Very well presented.</strong> You used a great catch phrase — &lsquo;400 lbs deadlift&rsquo; — to get everybody's full attention.</blockquote>
+        <figcaption class="kudos-attr">
+          Subburaj Gurusamy <span class="kudos-attr-role">— Senior Engineer, Amazon Robotics BASE</span>
+          <span class="kudos-context">stakeholder presentation · Jun 2025</span>
+        </figcaption>
+      </figure>
 
-      <!-- Tyler Jackson -->
-      <div class="accolade-card reveal">
-        <div class="accolade-quote">"I'm <strong>really going to miss you</strong>. You made everything look so easy — it was a pleasure working alongside you. 🙏"</div>
-        <div class="accolade-context">👋 End of Co-op · Dec 2024</div>
-        <div class="accolade-author">
-          <div class="accolade-avatar">TJ</div>
-          <div class="accolade-info">
-            <div class="accolade-name">Tyler Jackson</div>
-            <div class="accolade-role">Team Member · Amazon Robotics</div>
-            <div class="accolade-stars">★★★★★</div>
-          </div>
-        </div>
-      </div>
+      <figure class="kudos-item">
+        <blockquote class="kudos-quote">Come back! Hopefully the <strong>headcount gods are in your favor</strong>. It's been amazing having you on the team.</blockquote>
+        <figcaption class="kudos-attr">
+          Khin Khine <span class="kudos-attr-role">— Software Development Engineer, Amazon Robotics</span>
+          <span class="kudos-context">end of co-op · Dec 2024</span>
+        </figcaption>
+      </figure>
 
-      <!-- Srinivas Adapaka -->
-      <div class="accolade-card reveal">
-        <div class="accolade-quote">"Yes, <strong>Great job</strong> @mgidwan 🙌 — the presentation was sharp, focused, and you really highlighted the key impacts clearly."</div>
-        <div class="accolade-context">🎤 Stakeholder Presentation · Jun 2025</div>
-        <div class="accolade-author">
-          <div class="accolade-avatar">SA</div>
-          <div class="accolade-info">
-            <div class="accolade-name">Srinivas Adapaka</div>
-            <div class="accolade-role">Engineer · Amazon Robotics BASE</div>
-            <div class="accolade-stars">★★★★★</div>
-          </div>
-        </div>
-      </div>
+      <figure class="kudos-item">
+        <blockquote class="kudos-quote">I'm <strong>really going to miss you</strong>. You made everything look so easy — it was a pleasure working alongside you.</blockquote>
+        <figcaption class="kudos-attr">
+          Tyler Jackson <span class="kudos-attr-role">— Team Member, Amazon Robotics</span>
+          <span class="kudos-context">end of co-op · Dec 2024</span>
+        </figcaption>
+      </figure>
 
     </div>
   </div>
 </section>
 
-<div class="section-divider"></div>
+<!-- ─────────── BOOK / CONNECT ─────────── -->
+<section id="book" class="section">
+  <div class="wrap-narrow">
+    <p class="kicker">Let's talk</p>
+    <h2 class="h1">Pick a time that works.</h2>
+    <p class="lede-small">I'm happy to talk with recruiters, hiring managers, founders, and peers. No prep needed — just show up.</p>
+  </div>
 
-<!-- BOOK A CALL -->
-<section id="book">
   <div class="wrap">
-    <div class="sec-eyebrow">Schedule a Meeting</div>
-    <div class="sec-head">Let's <em>talk</em></div>
-    <p class="book-intro">I'm always open to connecting with recruiters, hiring managers, mentors, and peers. Pick a time that works for you — no email back-and-forth needed.</p>
-    <div class="book-grid">
+    <div class="book-cards">
+      <a href="https://calendly.com/mahesh7gidwani/15-minute-meeting" target="_blank" class="book-card">
+        <p class="book-time">15 minutes</p>
+        <h3 class="book-h">Quick intro</h3>
+        <p class="book-d">A fast, focused chat to get acquainted, discuss what you're looking for, and see if there's a mutual fit.</p>
+        <span class="book-cta">Schedule <span class="book-arrow">→</span></span>
+      </a>
+      <a href="https://calendly.com/mahesh7gidwani/30min" target="_blank" class="book-card">
+        <p class="book-time">30 minutes</p>
+        <h3 class="book-h">Deep dive</h3>
+        <p class="book-d">Walk through my work, talk through a specific role or opportunity, or explore how I might add value to your team.</p>
+        <span class="book-cta">Schedule <span class="book-arrow">→</span></span>
+      </a>
+      <a href="https://calendly.com/mahesh7gidwani/coffee-chat" target="_blank" class="book-card">
+        <p class="book-time">20 minutes</p>
+        <h3 class="book-h">Coffee chat (virtual)</h3>
+        <p class="book-d">Casual conversation — talk shop on ERP, SAP, Oracle, supply chain, or anything else. Great for networking and mentorship.</p>
+        <span class="book-cta">Schedule <span class="book-arrow">→</span></span>
+      </a>
+    </div>
+  </div>
 
-      <div class="book-card reveal">
-        <div class="book-icon">⚡</div>
-        <div class="book-duration">⏱ 15 Minutes</div>
-        <div class="book-title">Quick Intro Call</div>
-        <div class="book-desc">A fast, focused chat to get acquainted, discuss what you're looking for, and see if there's a mutual fit. No prep needed.</div>
-        <a class="book-btn" href="https://calendly.com/mahesh7gidwani/15-minute-meeting" target="_blank">
-          Schedule Now <span class="book-btn-arrow">→</span>
-        </a>
-      </div>
-
-      <div class="book-card reveal">
-        <div class="book-icon">🎯</div>
-        <div class="book-duration">⏱ 30 Minutes</div>
-        <div class="book-title">Deep Dive Discussion</div>
-        <div class="book-desc">Let's go deeper — walk through my projects, discuss a specific role or opportunity, or explore how I can add value to your team.</div>
-        <a class="book-btn" href="https://calendly.com/mahesh7gidwani/30min" target="_blank">
-          Schedule Now <span class="book-btn-arrow">→</span>
-        </a>
-      </div>
-
-      <div class="book-card reveal">
-        <div class="book-icon">☕</div>
-        <div class="book-duration">⏱ 20 Minutes</div>
-        <div class="book-title">Coffee Chat (Virtual)</div>
-        <div class="book-desc">Casual conversation — talk shop on ERP, SAP/Oracle, supply chain, or anything else. Great for networking and mentorship.</div>
-        <a class="book-btn" href="https://calendly.com/mahesh7gidwani/coffee-chat" target="_blank">
-          Schedule Now <span class="book-btn-arrow">→</span>
-        </a>
-      </div>
-
+  <div class="wrap-narrow">
+    <div class="contact-strip">
+      <span class="contact-strip-label">Or reach me directly</span>
+      <ul class="contact-strip-list">
+        <li><a href="mailto:mgidwani@purdue.edu">mgidwani@purdue.edu</a></li>
+        <li><a href="https://linkedin.com/in/maheshgidwanii" target="_blank">linkedin.com/in/maheshgidwanii</a></li>
+        <li><a href="tel:7654099862">765&nbsp;409&nbsp;9862</a></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<div class="section-divider"></div>
-
-<!-- CONTACT -->
-<section id="contact" class="alt">
-  <div class="wrap">
-    <div class="sec-eyebrow">Contact</div>
-    <div class="sec-head">Let's <em>connect</em></div>
-    <div class="contact-row">
-      <div class="contact-card reveal">
-        <div class="c-icon">✉️</div>
-        <div class="c-label">Email</div>
-        <a class="c-val" href="mailto:mgidwani@purdue.edu">mgidwani@purdue.edu</a>
-        <button class="copy-btn" onclick="copyText('mgidwani@purdue.edu', this)">Copy</button>
-      </div>
-      <div class="contact-card reveal">
-        <div class="c-icon">💼</div>
-        <div class="c-label">LinkedIn</div>
-        <a class="c-val" href="https://linkedin.com/in/maheshgidwanii" target="_blank">linkedin.com/in/maheshgidwanii</a>
-        <button class="copy-btn" onclick="copyText('https://linkedin.com/in/maheshgidwanii', this)">Copy URL</button>
-      </div>
-      <div class="contact-card reveal">
-        <div class="c-icon">📞</div>
-        <div class="c-label">Phone</div>
-        <a class="c-val" href="tel:7654099862">765-409-9862</a>
-        <button class="copy-btn" onclick="copyText('7654099862', this)">Copy</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
+<!-- ─────────── FOOTER ─────────── -->
 <footer>
-  <div class="footer-social">
-    <a href="mailto:mgidwani@purdue.edu">✉ mgidwani@purdue.edu</a>
-    <a href="https://linkedin.com/in/maheshgidwanii" target="_blank">💼 LinkedIn</a>
-    <a href="https://github.com/mahesh7gidwanii" target="_blank">🐙 GitHub</a>
-    <a href="resume.pdf" download>⬇ Resume</a>
-  </div>
-  <div class="footer-text">
-    <span>Mahesh Gidwani, PMP®</span> · Purdue MEM 2026 · Open to Full-Time Opportunities<br>
-    <small style="opacity:0.45;">Built with ❤ · Deployed on GitHub Pages</small>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <p class="colophon">Set in <strong>Fraunces</strong> &amp; <strong>Inter</strong>. Hand-coded HTML, CSS, and a tiny bit of JavaScript. No frameworks. Hosted on GitHub Pages.</p>
+      <p>&copy; 2025 Mahesh Gidwani · Last updated November 2025.</p>
+    </div>
+    <div class="footer-right">
+      <span class="footer-sig">Mahesh</span>
+    </div>
   </div>
 </footer>
 
 <script>
-// 1. Scroll progress
-const progressBar = document.getElementById('progress-bar');
+// Nav border on scroll
+const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
-  const total = document.documentElement.scrollHeight - window.innerHeight;
-  progressBar.style.width = (total > 0 ? (window.scrollY / total) * 100 : 0) + '%';
-});
+  nav.classList.toggle('scrolled', window.scrollY > 12);
+}, { passive: true });
 
-// 2. Nav shadow
-const nav = document.getElementById('main-nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 10);
-});
+// Active nav highlighting
+const sections = document.querySelectorAll('section[id], header[id]');
+const navAs = document.querySelectorAll('.nav-links a');
+const activeObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id));
+    }
+  });
+}, { threshold: 0.25 });
+sections.forEach(s => activeObs.observe(s));
 
-// 3. Back to top
-const btt = document.getElementById('back-to-top');
-window.addEventListener('scroll', () => {
-  btt.classList.toggle('show', window.scrollY > 400);
-});
-
-// 4. Dark mode
+// Dark mode
 const themeBtn = document.getElementById('theme-toggle');
 const root = document.documentElement;
 const saved = localStorage.getItem('theme') || 'light';
 root.setAttribute('data-theme', saved);
-themeBtn.textContent = saved === 'dark' ? '☀️' : '🌙';
+themeBtn.textContent = saved === 'dark' ? 'Light' : 'Dark';
 themeBtn.addEventListener('click', () => {
   const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
   root.setAttribute('data-theme', next);
   localStorage.setItem('theme', next);
-  themeBtn.textContent = next === 'dark' ? '☀️' : '🌙';
+  themeBtn.textContent = next === 'dark' ? 'Light' : 'Dark';
 });
 
-// 5. Mobile menu
-function toggleMobileMenu() {
+// Mobile menu
+function toggleMenu() {
   const m = document.getElementById('mobile-menu');
   const b = document.getElementById('hamburger');
   m.classList.toggle('open'); b.classList.toggle('open');
   document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
 }
-function closeMobileMenu() {
+function closeMenu() {
   document.getElementById('mobile-menu').classList.remove('open');
   document.getElementById('hamburger').classList.remove('open');
   document.body.style.overflow = '';
-}
-
-// 6. Scroll reveal
-const revealObs = new IntersectionObserver((entries) => {
-  entries.forEach((e, i) => {
-    if (e.isIntersecting) {
-      setTimeout(() => e.target.classList.add('visible'), i * 65);
-      revealObs.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
-document.querySelectorAll('.reveal, .reveal-left').forEach(el => revealObs.observe(el));
-
-// 7. Skill bars
-const barObs = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
-        setTimeout(() => { bar.style.width = bar.getAttribute('data-width') + '%'; }, 200);
-      });
-      barObs.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.2 });
-document.querySelectorAll('.skill-group-card').forEach(c => barObs.observe(c));
-
-// 8. Counters
-function animateCounter(el) {
-  const target = parseFloat(el.getAttribute('data-target'));
-  const prefix = el.getAttribute('data-prefix') || '';
-  const suffix = el.getAttribute('data-suffix') || '';
-  if (!target) return;
-  const isDecimal = target % 1 !== 0;
-  let start = null;
-  const step = (ts) => {
-    if (!start) start = ts;
-    const p = Math.min((ts - start) / 1500, 1);
-    const ease = 1 - Math.pow(1 - p, 3);
-    const val = ease * target;
-    el.textContent = prefix + (isDecimal ? val.toFixed(1) : Math.floor(val).toLocaleString()) + suffix;
-    if (p < 1) requestAnimationFrame(step);
-  };
-  requestAnimationFrame(step);
-}
-const ctrObs = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.querySelectorAll('[data-target]').forEach(animateCounter);
-      ctrObs.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.3 });
-const statsRow = document.querySelector('.stats-row');
-if (statsRow) ctrObs.observe(statsRow);
-
-// 9. Active nav
-const sections = document.querySelectorAll('section[id]');
-const navAs = document.querySelectorAll('.nav-links a');
-const activeObs = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navAs.forEach(a => {
-        a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
-      });
-    }
-  });
-}, { threshold: 0.3 });
-sections.forEach(s => activeObs.observe(s));
-
-// 10. Copy to clipboard
-function copyText(text, btn) {
-  navigator.clipboard.writeText(text).then(() => {
-    btn.textContent = '✓ Copied!';
-    btn.classList.add('copied');
-    setTimeout(() => {
-      btn.classList.remove('copied');
-      if (text.includes('@')) btn.textContent = 'Copy';
-      else if (text.includes('linkedin')) btn.textContent = 'Copy URL';
-      else btn.textContent = 'Copy';
-    }, 2000);
-  }).catch(() => {
-    btn.textContent = 'Error'; setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
-  });
 }
 </script>
 </body>
