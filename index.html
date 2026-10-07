@@ -352,25 +352,25 @@ a:hover { color: var(--accent-deep); }
   font-size: 11px; color: var(--muted);
   letter-spacing: 0;
 }
-/* Company logos — square icons from Simple Icons at 40px */
-.co-logo {
-  display: block;
-  width: 40px;
-  height: 40px;
-  margin-bottom: 16px;
+/* Company logo tile — white rounded square with real brand-color logo */
+.co-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 18px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.12);
 }
-[data-theme="light"] img.co-logo { filter: invert(1); }
-/* Applied Materials — text wordmark */
-.co-logo-text {
+.co-tile img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   display: block;
-  margin-bottom: 16px;
-  color: var(--accent);
-  font-family: 'Inter', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  letter-spacing: 0.12em;
-  line-height: 1;
-  text-transform: uppercase;
 }
 
 .work-co {
@@ -796,9 +796,9 @@ footer {
         <div class="work-meta">
           <p class="work-date">Sep 2026 — Present</p>
           <p class="work-loc">Sunnyvale, CA</p>
+          <div class="co-tile"><img src="logos/amat.svg" alt="Applied Materials"></div>
         </div>
         <div class="work-body">
-          <div class="co-logo-text" aria-label="Applied Materials">Applied Materials</div>
           <h3 class="work-co">Applied Materials</h3>
           <p class="work-role">Technical Program Manager II · C&amp;F Group</p>
           <p class="work-headline">The group's <strong>first dedicated TPM</strong> — owning the program schedule, risk register, and executive status reporting for an advanced hardware development program.</p>
@@ -814,9 +814,9 @@ footer {
         <div class="work-meta">
           <p class="work-date">Jan — Dec 2025</p>
           <p class="work-loc">Austin, TX</p>
+          <div class="co-tile"><img src="logos/amazon.svg" alt="Amazon"></div>
         </div>
         <div class="work-body">
-          <img class="co-logo" src="logos/amazon.svg" alt="Amazon" width="40" height="40">
           <h3 class="work-co">Amazon Robotics</h3>
           <p class="work-role">Technical Program Manager Co-op · Business Application Systems</p>
           <p class="work-headline">Governed the schedule and RAID log across <strong>4 enterprise transformation workstreams</strong> with <strong>zero missed milestones</strong>. Cut PO approval from <strong>15–20 days to 1–2</strong>. Saved <strong>$1.7M annually</strong>.</p>
@@ -837,9 +837,9 @@ footer {
         <div class="work-meta">
           <p class="work-date">Apr 2022 — Jun 2024</p>
           <p class="work-loc">Bangalore, India</p>
+          <div class="co-tile"><img src="logos/wipro.svg" alt="Wipro"></div>
         </div>
         <div class="work-body">
-          <img class="co-logo" src="logos/wipro.svg" alt="Wipro" width="40" height="40">
           <h3 class="work-co">Wipro Limited</h3>
           <p class="work-role">Senior ERP Consultant · Digital Transformation</p>
           <p class="work-headline">Delivered <strong>3 full-lifecycle enterprise system implementations</strong> with <strong>zero Priority 1 incidents</strong>. Cut PO cycle from <strong>8 to 3 days</strong>. Recovered <strong>$0.8M in early-payment discounts</strong>.</p>
@@ -856,9 +856,9 @@ footer {
         <div class="work-meta">
           <p class="work-date">Aug 2021 — Apr 2022</p>
           <p class="work-loc">Bangalore, India</p>
+          <div class="co-tile"><img src="logos/hp.svg" alt="HP"></div>
         </div>
         <div class="work-body">
-          <img class="co-logo" src="logos/hp.svg" alt="HP" width="40" height="40">
           <h3 class="work-co">HP Inc.</h3>
           <p class="work-role">Business Analyst · Customer Support Solutions</p>
           <p class="work-headline">Cut time to market for an HP printer by <strong>6 weeks</strong> through reorganized NPI tracking. Reduced customer response time <strong>29%</strong> with Power BI dashboards.</p>
