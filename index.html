@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,39 +17,39 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #faf8f3;
-  --paper: #ffffff;
-  --paper-warm: #f5f1e8;
-  --ink: #1a1a1a;
-  --ink-soft: #2e2e2e;
-  --body: #3d3d3d;
-  --muted: #6b6b6b;
-  --rule: #d8d2c3;
-  --border: #e8e2d4;
-  --accent: #b8410e;
-  --accent-deep: #8a3209;
-  --accent-soft: #fbf2eb;
+  --bg: #0a0a0a;
+  --paper: #111111;
+  --paper-warm: #161616;
+  --ink: #fafafa;
+  --ink-soft: #e4e4e7;
+  --body: #a1a1aa;
+  --muted: #71717a;
+  --rule: #262626;
+  --border: #27272a;
+  --accent: #f97316;
+  --accent-deep: #fb923c;
+  --accent-soft: #1c1410;
 }
 
-[data-theme="dark"] {
-  --bg: #14120e;
-  --paper: #1e1b15;
-  --paper-warm: #25221c;
-  --ink: #f5f1e8;
-  --ink-soft: #e8e2d4;
-  --body: #c4bfb3;
-  --muted: #8a8478;
-  --rule: #3a362e;
-  --border: #3a362e;
-  --accent: #e07a3b;
-  --accent-deep: #f5a05e;
-  --accent-soft: #25221c;
+[data-theme="light"] {
+  --bg: #fafafa;
+  --paper: #ffffff;
+  --paper-warm: #f4f4f5;
+  --ink: #09090b;
+  --ink-soft: #18181b;
+  --body: #3f3f46;
+  --muted: #71717a;
+  --rule: #e4e4e7;
+  --border: #d4d4d8;
+  --accent: #ea580c;
+  --accent-deep: #c2410c;
+  --accent-soft: #fff7ed;
 }
 
 html { scroll-behavior: smooth; }
@@ -81,13 +81,17 @@ a:hover { color: var(--accent-deep); }
 
 /* ── Typography ── */
 .kicker {
-  font-family: 'Inter', sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 20px;
+}
+.kicker::before {
+  content: '> ';
+  opacity: 0.6;
 }
 
 .display {
@@ -173,16 +177,17 @@ a:hover { color: var(--accent-deep); }
 }
 .nav-links a:hover, .nav-links a.active { color: var(--accent); }
 .theme-toggle {
-  background: none; border: 1px solid var(--rule);
+  background: none; border: 1px solid var(--border);
   color: var(--body); cursor: pointer;
-  font-family: 'Inter', sans-serif;
-  font-size: 12px; font-weight: 500;
-  padding: 6px 12px; border-radius: 4px;
-  letter-spacing: 0.02em;
-  transition: border-color 0.15s, color 0.15s;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; font-weight: 500;
+  padding: 6px 12px; border-radius: 2px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
   margin-left: 24px;
 }
-.theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+.theme-toggle:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
 
 .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px 0 8px 12px; }
 .hamburger span {
@@ -222,17 +227,17 @@ a:hover { color: var(--accent-deep); }
 }
 .btn-primary {
   display: inline-block;
-  background: var(--ink);
-  color: var(--bg);
-  padding: 14px 22px;
-  font-size: 15px; font-weight: 500;
+  background: var(--accent);
+  color: #0a0a0a;
+  padding: 14px 24px;
+  font-size: 14px; font-weight: 600;
   letter-spacing: -0.005em;
   text-decoration: none;
   border-radius: 2px;
-  border: 1px solid var(--ink);
-  transition: background 0.15s, color 0.15s;
+  border: 1px solid var(--accent);
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
 }
-.btn-primary:hover { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.btn-primary:hover { background: var(--accent-deep); border-color: var(--accent-deep); color: #0a0a0a; transform: translateY(-1px); }
 .link-subtle {
   font-size: 14px; color: var(--body);
   text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px;
@@ -258,14 +263,14 @@ a:hover { color: var(--accent-deep); }
   object-fit: cover;
   object-position: center 25%;
   display: block;
-  filter: grayscale(0.15) contrast(1.02);
+  border-radius: 2px;
 }
 .hero-portrait figcaption {
   margin-top: 12px;
-  font-size: 12px; color: var(--muted);
-  font-style: italic;
-  font-family: 'Fraunces', Georgia, serif;
-  letter-spacing: -0.005em;
+  font-size: 11px; color: var(--muted);
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0;
+  text-transform: uppercase;
 }
 
 /* ── Section header ── */
@@ -295,9 +300,10 @@ a:hover { color: var(--accent-deep); }
 .currently p { font-size: 15px; line-height: 1.7; color: var(--ink-soft); }
 .currently-label {
   display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--accent);
   margin-right: 12px;
@@ -317,16 +323,18 @@ a:hover { color: var(--accent-deep); }
 .work-item:last-child { border-bottom: 1px solid var(--rule); }
 .work-meta { padding-top: 6px; }
 .work-date {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
   font-weight: 500;
   color: var(--ink-soft);
-  letter-spacing: -0.005em;
+  letter-spacing: 0;
   margin-bottom: 4px;
+  text-transform: uppercase;
 }
 .work-loc {
-  font-size: 12px; color: var(--muted);
-  letter-spacing: 0.02em;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--muted);
+  letter-spacing: 0;
 }
 .work-co {
   font-family: 'Fraunces', Georgia, serif;
@@ -427,10 +435,11 @@ a:hover { color: var(--accent-deep); }
 .cert-name { font-size: 15px; color: var(--ink-soft); font-weight: 500; }
 .cert-name small { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; font-weight: 400; }
 .cert-action a, .cert-action span {
-  font-size: 12px; color: var(--accent);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--accent);
   text-decoration: none;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 .cert-action a:hover { text-decoration: underline; }
@@ -447,8 +456,8 @@ a:hover { color: var(--accent-deep); }
 }
 .edu-item:last-child { border-bottom: 1px solid var(--rule); }
 .edu-item:first-child { border-top: 1px solid var(--ink); }
-.edu-date { font-family: 'Fraunces', Georgia, serif; font-size: 14px; font-weight: 500; color: var(--ink-soft); }
-.edu-date small { display: block; font-size: 12px; color: var(--muted); margin-top: 4px; font-weight: 400; font-family: 'Inter', sans-serif; }
+.edu-date { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; color: var(--ink-soft); text-transform: uppercase; }
+.edu-date small { display: block; font-size: 11px; color: var(--muted); margin-top: 4px; font-weight: 400; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; }
 .edu-school { font-family: 'Fraunces', Georgia, serif; font-size: 24px; font-weight: 700; color: var(--ink); letter-spacing: -0.015em; margin-bottom: 4px; }
 .edu-deg { font-size: 15px; color: var(--ink-soft); margin-bottom: 12px; }
 .edu-note { font-size: 14px; color: var(--body); line-height: 1.6; }
@@ -461,7 +470,7 @@ a:hover { color: var(--accent-deep); }
   gap: 48px;
 }
 .proj-item {}
-.proj-date { font-size: 12px; color: var(--muted); letter-spacing: 0.02em; margin-bottom: 8px; text-transform: uppercase; font-weight: 500; }
+.proj-date { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 0; margin-bottom: 8px; text-transform: uppercase; font-weight: 500; }
 .proj-h {
   font-family: 'Fraunces', Georgia, serif;
   font-weight: 700;
@@ -498,8 +507,8 @@ a:hover { color: var(--accent-deep); }
 }
 .lead-item:first-child { border-top: 1px solid var(--ink); }
 .lead-item:last-child { border-bottom: 1px solid var(--rule); }
-.lead-date { font-family: 'Fraunces', Georgia, serif; font-size: 14px; font-weight: 500; color: var(--ink-soft); }
-.lead-date small { display: block; font-size: 12px; color: var(--muted); font-family: 'Inter', sans-serif; margin-top: 4px; font-weight: 400; }
+.lead-date { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; color: var(--ink-soft); text-transform: uppercase; }
+.lead-date small { display: block; font-size: 11px; color: var(--muted); font-family: 'JetBrains Mono', monospace; margin-top: 4px; font-weight: 400; text-transform: uppercase; }
 .lead-h { font-family: 'Fraunces', Georgia, serif; font-size: 24px; font-weight: 700; color: var(--ink); margin-bottom: 6px; letter-spacing: -0.015em; }
 .lead-sub { font-size: 13px; color: var(--accent); font-weight: 500; margin-bottom: 14px; }
 .lead-body { font-size: 15px; color: var(--body); line-height: 1.7; max-width: 60ch; }
@@ -578,8 +587,9 @@ a:hover { color: var(--accent-deep); }
 .book-card:hover { background: var(--accent-soft); }
 .book-card:hover .book-arrow { transform: translateX(6px); color: var(--accent); }
 .book-time {
-  font-size: 11px; font-weight: 700;
-  letter-spacing: 0.14em; text-transform: uppercase;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.04em; text-transform: uppercase;
   color: var(--accent); margin-bottom: 16px;
 }
 .book-h {
@@ -607,8 +617,9 @@ a:hover { color: var(--accent-deep); }
   margin-top: 32px;
 }
 .contact-strip-label {
-  font-size: 12px; font-weight: 600;
-  color: var(--muted); letter-spacing: 0.06em;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; font-weight: 500;
+  color: var(--muted); letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 .contact-strip-list {
@@ -681,7 +692,7 @@ footer {
       <li><a href="#kudos">Kudos</a></li>
       <li><a href="#book">Book a call</a></li>
     </ul>
-    <button class="theme-toggle" id="theme-toggle">Dark</button>
+    <button class="theme-toggle" id="theme-toggle">Light</button>
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -1151,7 +1162,7 @@ sections.forEach(s => activeObs.observe(s));
 // Dark mode
 const themeBtn = document.getElementById('theme-toggle');
 const root = document.documentElement;
-const saved = localStorage.getItem('theme') || 'light';
+const saved = localStorage.getItem('theme') || 'dark';
 root.setAttribute('data-theme', saved);
 themeBtn.textContent = saved === 'dark' ? 'Light' : 'Dark';
 themeBtn.addEventListener('click', () => {
