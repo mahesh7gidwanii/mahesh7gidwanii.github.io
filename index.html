@@ -334,6 +334,52 @@ a:hover { color: var(--accent-deep); }
   font-size: 11px; color: var(--muted);
   letter-spacing: 0;
 }
+/* Company logos — monochrome, theme-aware via CSS mask */
+.co-logo {
+  display: block;
+  height: 22px;
+  margin-bottom: 14px;
+  background: var(--ink-soft);
+  opacity: 0.88;
+  -webkit-mask-position: left center;
+  mask-position: left center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+.co-logo--amazon {
+  width: 80px;
+  -webkit-mask-image: url('https://cdn.simpleicons.org/amazon');
+  mask-image: url('https://cdn.simpleicons.org/amazon');
+}
+.co-logo--hp {
+  width: 24px;
+  height: 24px;
+  -webkit-mask-image: url('https://cdn.simpleicons.org/hp');
+  mask-image: url('https://cdn.simpleicons.org/hp');
+}
+.co-logo--wipro {
+  width: 76px;
+  -webkit-mask-image: url('https://cdn.simpleicons.org/wipro');
+  mask-image: url('https://cdn.simpleicons.org/wipro');
+}
+/* Applied Materials — not in Simple Icons; render as styled text wordmark */
+.co-logo--amat {
+  background: none;
+  opacity: 1;
+  color: var(--ink-soft);
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  line-height: 22px;
+  text-transform: uppercase;
+  -webkit-mask: none;
+  mask: none;
+  width: auto;
+}
+
 .work-co {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
@@ -759,6 +805,7 @@ footer {
           <p class="work-loc">Sunnyvale, CA</p>
         </div>
         <div class="work-body">
+          <div class="co-logo co-logo--amat" aria-label="Applied Materials">Applied Materials</div>
           <h3 class="work-co">Applied Materials</h3>
           <p class="work-role">Technical Program Manager II · C&amp;F Group</p>
           <p class="work-headline">The group's <strong>first dedicated TPM</strong> — owning the program schedule, risk register, and executive status reporting for an advanced hardware development program.</p>
@@ -776,6 +823,7 @@ footer {
           <p class="work-loc">Austin, TX</p>
         </div>
         <div class="work-body">
+          <div class="co-logo co-logo--amazon" aria-label="Amazon"></div>
           <h3 class="work-co">Amazon Robotics</h3>
           <p class="work-role">Technical Program Manager Co-op · Business Application Systems</p>
           <p class="work-headline">Governed the schedule and RAID log across <strong>4 enterprise transformation workstreams</strong> with <strong>zero missed milestones</strong>. Cut PO approval from <strong>15–20 days to 1–2</strong>. Saved <strong>$1.7M annually</strong>.</p>
@@ -798,6 +846,7 @@ footer {
           <p class="work-loc">Bangalore, India</p>
         </div>
         <div class="work-body">
+          <div class="co-logo co-logo--wipro" aria-label="Wipro"></div>
           <h3 class="work-co">Wipro Limited</h3>
           <p class="work-role">Senior ERP Consultant · Digital Transformation</p>
           <p class="work-headline">Delivered <strong>3 full-lifecycle enterprise system implementations</strong> with <strong>zero Priority 1 incidents</strong>. Cut PO cycle from <strong>8 to 3 days</strong>. Recovered <strong>$0.8M in early-payment discounts</strong>.</p>
@@ -816,6 +865,7 @@ footer {
           <p class="work-loc">Bangalore, India</p>
         </div>
         <div class="work-body">
+          <div class="co-logo co-logo--hp" aria-label="HP"></div>
           <h3 class="work-co">HP Inc.</h3>
           <p class="work-role">Business Analyst · Customer Support Solutions</p>
           <p class="work-headline">Cut time to market for an HP printer by <strong>6 weeks</strong> through reorganized NPI tracking. Reduced customer response time <strong>29%</strong> with Power BI dashboards.</p>
